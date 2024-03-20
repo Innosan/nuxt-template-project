@@ -1,26 +1,18 @@
 <script setup lang="ts">
+import { useSettingsStore } from "~/stores/settingsStore";
+
+const settingsStore = useSettingsStore();
 const appConfig = useAppConfig();
+const route = useRoute();
 
-onMounted(() => {
-	appConfig.isMobile = window.innerWidth <= 900;
-
-	window.addEventListener("resize", () => {
-		appConfig.isMobile = window.innerWidth <= 900;
-	});
-});
-
-onUnmounted(() => {
-	window.removeEventListener("resize", () => {
-		appConfig.isMobile = window.innerWidth <= 900;
-	});
-});
+appConfig.ui.primary = settingsStore.primaryColor;
 </script>
 
 <template>
 	<div>
 		<Header />
-		<div class="page-container">
-			<NuxtPage />
+		<div class="page-container" v-auto-animate>
+			<NuxtPage :key="route" />
 		</div>
 		<Footer />
 	</div>
