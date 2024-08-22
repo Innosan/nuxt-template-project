@@ -26,5 +26,3 @@ const props = defineProps({
 		</UDropdown>
 	</nav>
 </template>
-
-<style scoped></style>

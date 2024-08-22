@@ -9,5 +9,3 @@ import { socials } from "~/utils/navigation.js";
 		</div>
 	</footer>
 </template>
-
-<style scoped></style>

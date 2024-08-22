@@ -11,13 +11,5 @@ const props = defineProps({
 </script>
 
 <template>
-	<nav>
-		<ul>
-			<li v-for="link in links">
-				<IconedNavigationLink :link="link" />
-			</li>
-		</ul>
-	</nav>
+	<UHorizontalNavigation :links="navigation" />
 </template>
-
-<style scoped></style>
