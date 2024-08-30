@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationLink } from "~/types/general";
+import type { NavigationLink } from "~/types/utility/NavigationLink";
 
 const props = defineProps({
 	navigation: {

@@ -1,6 +1,8 @@
 export default defineAppConfig({
+	appName: "Nuxt Template",
+
 	ui: {
-		primary: "violet",
+		primary: "red",
 		gray: "zinc",
 	},
 });

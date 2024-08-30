@@ -1,5 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-	<h2>About page</h2>
+	<PageSection title="About" icon="i-heroicons-information-circle-solid">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		</p>
+	</PageSection>
 </template>

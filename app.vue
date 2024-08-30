@@ -11,9 +11,8 @@ appConfig.ui.primary = settingsStore.primaryColor;
 <template>
 	<div>
 		<Header />
-		<div class="page-container" v-auto-animate>
+		<div class="page-container pt-6" v-auto-animate>
 			<NuxtPage :key="route" />
 		</div>
-		<Footer />
 	</div>
 </template>
