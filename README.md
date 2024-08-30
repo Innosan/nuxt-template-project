@@ -91,7 +91,28 @@ yarn install
 bun install
 ```
 
-Deployment
+## Deployment
+
+```bash
+# bun
+bun run dev
+```
+
+```bash
+# npm
+npm run dev
+```
+
+```bash
+# pnpm
+pnpm run dev
+```
+
+```bash
+# yarn
+yarn dev
+```
+
 Check out the [Deployment guide](https://nuxt.com/docs/getting-started/deployment) for more information.  
 License
 This project is licensed under the MIT License

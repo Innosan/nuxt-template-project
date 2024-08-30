@@ -14,5 +14,7 @@ appConfig.ui.primary = settingsStore.primaryColor;
 		<div class="page-container pt-6" v-auto-animate>
 			<NuxtPage :key="route" />
 		</div>
+
+		<UNotifications />
 	</div>
 </template>

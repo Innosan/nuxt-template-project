@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import Grid from "~/components/layout/Grid.vue";
 import { CardSizes } from "~/types/ui/CardSizes";
+import { getToast, Toasts } from "~/types/ui/Notification";
+const toast = useToast();
 
 const name = ref("");
 </script>
@@ -14,7 +15,7 @@ const name = ref("");
 		<TitledBlock title="Personal information">
 			<Grid
 				:columns="2"
-				:responsive-columns="`sm:grid-cols-1 md:grid-cols-2`"
+				:responsive-columns="`sm:grid-cols-2 md:grid-cols-2`"
 			>
 				<UInput
 					v-model="name"
@@ -25,6 +26,14 @@ const name = ref("");
 					v-model="name"
 					placeholder="John Doe"
 					icon="i-heroicons-user-solid"
+				/>
+				<UButton
+					@click="
+						toast.add(getToast(Toasts.SUCCESS, 'Form submitted!'))
+					"
+					icon="i-heroicons-check-solid"
+					label="Submit"
+					class="col-span-2 md:col-span-2"
 				/>
 			</Grid>
 		</TitledBlock>
