@@ -19,6 +19,7 @@ const isClicked = ref(false);
 	<UCard :ui="CardSizes.imageCard" @click="isClicked = !isClicked">
 		<template #header>
 			<NuxtImg
+				loading="lazy"
 				class="h-56 transition-all object-top rounded-2xl content-center w-full object-cover hover:object-center"
 				:class="
 					isClicked

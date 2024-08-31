@@ -17,5 +17,9 @@ export default defineNuxtConfig({
 		},
 	],
 
+	image: {
+		domains: ["nekos.best"],
+	},
+
 	css: ["~/assets/styles/main.css"],
 });
