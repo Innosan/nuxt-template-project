@@ -6,5 +6,6 @@ header, footer div, .page-container {
 .page-container {
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 2rem;
 	gap: 2em;
 }

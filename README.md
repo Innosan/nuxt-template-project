@@ -39,7 +39,7 @@ This project is a Nuxt 3 application template with TypeScript support. It includ
 - `server/`: Contains server-side code.
 	- `tsconfig.json`: TypeScript configuration for the server.
 - `stores/`: Contains Pinia stores.
-	- `settingsStore.ts`: Store for managing application settings.
+	- `settings.ts`: Store for managing application settings.
 - `types/`: Contains TypeScript type definitions.
 	- `ui/`: UI-related types.
 		- `SectionSizes.ts`: Type definitions for section sizes.
@@ -63,7 +63,7 @@ The project is structured to separate concerns and improve maintainability:
 
 ## Stores
 
-### `stores/settingsStore.ts`
+### `stores/settings.ts`
 
 This file contains the settings store which manages the application's settings, such as the primary color. It uses Pinia for state management.
 

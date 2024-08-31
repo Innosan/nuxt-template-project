@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSettingsStore } from "~/stores/settingsStore";
+import { useSettingsStore } from "~/stores/settings";
 
 const settingsStore = useSettingsStore();
 const appConfig = useAppConfig();

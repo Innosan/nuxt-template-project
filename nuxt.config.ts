@@ -6,6 +6,8 @@ export default defineNuxtConfig({
 		"@formkit/auto-animate/nuxt",
 		"@pinia/nuxt",
 		"@pinia-plugin-persistedstate/nuxt",
+
+		"@nuxt/image", // Delete this line if you don't need it (and from package.json)
 	],
 
 	components: [

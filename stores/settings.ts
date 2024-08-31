@@ -1,3 +1,5 @@
+import { persistOptions } from "~/utils/persistence";
+
 export const useSettingsStore = defineStore(
 	"settings-store",
 	() => {
@@ -20,11 +22,6 @@ export const useSettingsStore = defineStore(
 		};
 	},
 	{
-		persist: {
-			storage: persistedState.cookiesWithOptions({
-				maxAge: 60 * 60 * 24 * 120,
-				sameSite: "strict",
-			}),
-		},
+		persist: persistOptions.cookieDefault,
 	},
 );
