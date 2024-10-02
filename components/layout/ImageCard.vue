@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { CardSizes } from "~/types/ui/CardSizes";
-
 const props = defineProps({
 	url: {
 		type: String,
@@ -16,7 +14,7 @@ const isClicked = ref(false);
 </script>
 
 <template>
-	<UCard :ui="CardSizes.imageCard" @click="isClicked = !isClicked">
+	<UCard @click="isClicked = !isClicked">
 		<template #header>
 			<NuxtImg
 				loading="lazy"

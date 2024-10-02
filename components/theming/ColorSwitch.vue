@@ -1,8 +1,9 @@
 <script setup lang="ts">
 const settingsStore = useSettingsStore();
+const appConfig = useAppConfig();
 
 const changeTheme = (color: string) => {
-	useAppConfig().ui.primary = color;
+	appConfig.ui.colors.primary = color;
 	settingsStore.setPrimaryColor(color);
 };
 
@@ -11,7 +12,7 @@ const colors = [
 		{
 			label: "blue",
 			className: "decoration-blue-500",
-			click: () => {
+			select: () => {
 				changeTheme("blue");
 			},
 		},
@@ -20,7 +21,7 @@ const colors = [
 		{
 			label: "red",
 			className: "decoration-red-500",
-			click: () => {
+			select: () => {
 				changeTheme("red");
 			},
 		},
@@ -29,7 +30,7 @@ const colors = [
 		{
 			label: "green",
 			className: "decoration-green-500",
-			click: () => {
+			select: () => {
 				changeTheme("green");
 			},
 		},
@@ -38,7 +39,7 @@ const colors = [
 		{
 			label: "violet",
 			className: "decoration-violet-500",
-			click: () => {
+			select: () => {
 				changeTheme("violet");
 			},
 		},
@@ -48,7 +49,7 @@ const colors = [
 
 <template>
 	<ClientOnly>
-		<UDropdown :items="colors" mode="click">
+		<UDropdownMenu :items="colors">
 			<UButton icon="i-heroicons-paint-brush-solid" />
 
 			<template
@@ -71,6 +72,6 @@ const colors = [
 					}}
 				</p>
 			</template>
-		</UDropdown>
+		</UDropdownMenu>
 	</ClientOnly>
 </template>

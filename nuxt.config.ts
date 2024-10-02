@@ -1,6 +1,12 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 
+	ui: {
+		theme: {
+			colors: ["cerise", "blue", "green"],
+		},
+	},
+
 	modules: [
 		"@nuxt/ui",
 		"@formkit/auto-animate/nuxt",

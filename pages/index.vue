@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import { useAnimeStore } from "~/stores/anime";
-import ImageCard from "~/components/layout/ImageCard.vue";
-const toast = useToast();
 
 const animeStore = useAnimeStore();
 animeStore.getArts(false);
-
-const name = ref("");
 </script>
 
 <template>
@@ -24,19 +20,20 @@ const name = ref("");
 					:url="image.url"
 				>
 					<div class="flex items-center gap-1">
-						<NuxtLink
+						<UButton
 							class="font-bold text-lg"
 							:to="image.artist_href"
-							:external="true"
+							variant="link"
 							target="_blank"
-							>{{ image.artist_name }}</NuxtLink
+							>{{ image.artist_name }}</UButton
 						>
 						•
-						<NuxtLink
+						<UButton
 							:to="image.source_url"
 							:external="true"
+							variant="subtle"
 							target="_blank"
-							>Source</NuxtLink
+							>Source</UButton
 						>
 					</div>
 				</ImageCard>
@@ -44,7 +41,6 @@ const name = ref("");
 					label="Load more"
 					@click="animeStore.getArts(true)"
 					icon="i-heroicons-chevron-down"
-					class="col-span-full"
 				/>
 			</Grid>
 		</TitledBlock>

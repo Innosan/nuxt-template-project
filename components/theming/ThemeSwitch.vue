@@ -1,6 +1,6 @@
 <template>
 	<ClientOnly>
-		<UToggle
+		<USwitch
 			color="primary"
 			size="xl"
 			on-icon="i-heroicons-moon-20-solid"
@@ -20,11 +20,9 @@
 const colorMode = useColorMode();
 
 const isDark = computed({
-	get() {
-		return colorMode.value === "dark";
-	},
-	set() {
-		colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
+	get: () => colorMode.value === "dark",
+	set: (value) => {
+		colorMode.preference = value ? "dark" : "light";
 	},
 });
 </script>

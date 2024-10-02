@@ -29,5 +29,5 @@ const props = defineProps({
 		<slot />
 	</section>
 
-	<UDivider v-if="isDivided" />
+	<USeparator v-if="isDivided" />
 </template>

@@ -11,5 +11,5 @@ const props = defineProps({
 </script>
 
 <template>
-	<UHorizontalNavigation :links="navigation" />
+	<UNavigationMenu orientation="horizontal" :links="navigation" />
 </template>

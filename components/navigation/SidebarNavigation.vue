@@ -6,26 +6,29 @@ const props = defineProps({
 		type: Array<NavigationLink>,
 	},
 });
-
-const isOpen = ref(false);
 </script>
 
 <template>
 	<div>
-		<UButton @click="isOpen = !isOpen" icon="i-heroicons-bars-3" />
+		<USlideover>
+			<UButton icon="i-heroicons-bars-3" />
 
-		<USlideover v-model="isOpen">
-			<UCard>
-				<template #header>
-					<UButton
-						@click="isOpen = !isOpen"
-						color="gray"
-						variant="ghost"
-						icon="i-heroicons-x-mark"
+			<template #content>
+				<UCard>
+					<template #header>
+						<UButton
+							@click="isOpen = !isOpen"
+							color="gray"
+							variant="ghost"
+							icon="i-heroicons-x-mark"
+						/>
+					</template>
+					<UNavigationMenu
+						orientation="vertical"
+						:links="navigation"
 					/>
-				</template>
-				<UVerticalNavigation :links="navigation" />
-			</UCard>
+				</UCard>
+			</template>
 		</USlideover>
 	</div>
 </template>
