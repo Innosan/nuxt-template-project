@@ -37,10 +37,17 @@ animeStore.getArts(false);
 						>
 					</div>
 				</ImageCard>
+
 				<UButton
 					label="Load more"
 					@click="animeStore.getArts(true)"
 					icon="i-heroicons-chevron-down"
+				/>
+
+				<UButton
+					label="Refresh"
+					@click="animeStore.getArts(false)"
+					icon="i-heroicons-arrow-path"
 				/>
 			</Grid>
 		</TitledBlock>

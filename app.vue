@@ -12,7 +12,7 @@ appConfig.ui.colors.primary = settingsStore.primaryColor;
 	<UApp :toaster="{ position: 'bottom-right' }">
 		<Header />
 		<div class="page-container pt-6" v-auto-animate>
-			<NuxtPage :key="route" />
+			<NuxtPage :key="route.path" />
 		</div>
 	</UApp>
 </template>
