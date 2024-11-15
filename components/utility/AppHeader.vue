@@ -8,13 +8,16 @@ const appConfig = useAppConfig();
 			<h1 class="font-black text-2xl text-nowrap text-primary-400">
 				{{ appConfig.appName }}
 			</h1>
+
 			<TopNavigation class="md:flex hidden" :links="navigation" />
 		</div>
+
 		<div>
 			<SidebarNavigation
 				class="block md:hidden"
 				:navigation="navigation"
 			/>
+
 			<div class="md:flex hidden gap-4 items-center">
 				<ThemeSwitch />
 				<ColorSwitch />

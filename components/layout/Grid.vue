@@ -1,25 +1,20 @@
 <script setup lang="ts">
+import {
+	classNames,
+	defaultGridOptions,
+	type GridOptions,
+} from "~/types/ui/GridOptions";
+
 const props = defineProps({
-	columns: {
-		type: Number,
-		default: 1,
-	},
-	responsiveColumns: {
-		type: String,
-		default: "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
-	},
-	contentGap: {
-		type: Number,
-		default: 4,
+	options: {
+		type: Object as PropType<GridOptions>,
+		default: () => defaultGridOptions,
 	},
 });
 </script>
 
 <template>
-	<div
-		class="grid"
-		:class="`gap-${contentGap} grid-cols-${columns} ${responsiveColumns}`"
-	>
+	<div class="grid" :class="classNames(options)">
 		<slot />
 	</div>
 </template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useAnimeStore } from "~/stores/anime";
+import { createGridOptions } from "~/types/ui/GridOptions";
 
 const animeStore = useAnimeStore();
 animeStore.getArts(false);
@@ -37,19 +38,19 @@ animeStore.getArts(false);
 						>
 					</div>
 				</ImageCard>
-
-				<UButton
-					label="Load more"
-					@click="animeStore.getArts(true)"
-					icon="i-heroicons-chevron-down"
-				/>
-
-				<UButton
-					label="Refresh"
-					@click="animeStore.getArts(false)"
-					icon="i-heroicons-arrow-path"
-				/>
 			</Grid>
+
+			<UButton
+				label="Load more"
+				@click="animeStore.getArts(true)"
+				icon="i-heroicons-chevron-down"
+			/>
+
+			<UButton
+				label="Refresh"
+				@click="animeStore.getArts(false)"
+				icon="i-heroicons-arrow-path"
+			/>
 		</TitledBlock>
 	</PageSection>
 </template>
