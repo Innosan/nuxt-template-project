@@ -11,10 +11,14 @@ const props = defineProps({
 		default: () => defaultGridOptions,
 	},
 });
+
+// TODO: Add support for responsive columns (Need to wait for Nuxt UI and Tailwind v4 to update)
 </script>
 
 <template>
-	<div class="grid" :class="classNames(options)">
+	<div
+		class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6"
+	>
 		<slot />
 	</div>
 </template>

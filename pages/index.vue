@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useAnimeStore } from "~/stores/anime";
-import { createGridOptions } from "~/types/ui/GridOptions";
 
 const animeStore = useAnimeStore();
 animeStore.getArts(false);

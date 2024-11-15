@@ -30,7 +30,7 @@ export const createGridOptions = (
 };
 
 export const classNames = (options: GridOptions) => {
-	return `gap-${options.gap} grid-cols-${options.columns} ${Object.entries(
+	return `grid gap-${options.gap} grid-cols-${options.columns} ${Object.entries(
 		options.responsiveColumns || {},
 	)
 		.map(([key, value]) => `${key}:grid-cols-${value}`)

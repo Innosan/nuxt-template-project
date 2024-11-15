@@ -1,31 +1,41 @@
 export default defineNuxtConfig({
-								devtools: { enabled: true },
+	devtools: { enabled: true },
 
-								ui: {
-																theme: {
-																								colors: ["cerise", "blue", "green"],
-																},
-								},
+	ui: {
+		theme: {
+			colors: ["cerise", "blue", "green"],
+		},
+	},
 
-								modules: [
-																"@nuxt/ui",
-																"@formkit/auto-animate/nuxt",
-																"@pinia/nuxt",
-																"@pinia-plugin-persistedstate/nuxt",
+	eslint: {
+		config: {
+			stylistic: {
+				indent: "tab",
+				semi: true,
+			},
+		},
+	},
 
-																"@nuxt/image", // Delete this line if you don't need it (and from package.json)
-								],
+	modules: [
+		"@nuxt/ui",
+		"@formkit/auto-animate/nuxt",
+		"@pinia/nuxt",
+		"@pinia-plugin-persistedstate/nuxt",
+		"@nuxt/eslint",
 
-								components: [
-																{
-																								path: "~/components",
-																								pathPrefix: false,
-																},
-								],
+		"@nuxt/image", // Delete this line if you don't need it (and from package.json)
+	],
 
-								image: {
-																domains: ["nekos.best"],
-								},
+	components: [
+		{
+			path: "~/components",
+			pathPrefix: false,
+		},
+	],
 
-								css: ["~/assets/styles/main.css"],
+	image: {
+		domains: ["nekos.best"],
+	},
+
+	css: ["~/assets/styles/main.css"],
 });
