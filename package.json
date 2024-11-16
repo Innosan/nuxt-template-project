@@ -31,7 +31,7 @@
 	},
 	"dependencies": {
 		"@formkit/auto-animate": "^0.8.1",
-		"@nuxt/ui": "3.0.0-alpha.5",
+		"@nuxt/ui": "3.0.0-alpha.8",
 		"@nuxtjs/eslint-module": "^4.1.0",
 		"@pinia/nuxt": "^0.5.1"
 	}

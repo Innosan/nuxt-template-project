@@ -11,6 +11,16 @@ animeStore.getArts(false);
 		icon="i-heroicons-home-solid"
 		:is-divided="false"
 	>
+		<UButtonGroup>
+			<UButton
+				v-for="tag in animeStore.categories"
+				:key="tag"
+				variant="subtle"
+				:label="tag"
+				@click="animeStore.getArtsByTag(tag)"
+			/>
+		</UButtonGroup>
+
 		<Grid v-auto-animate>
 			<ImageCard
 				v-for="image in animeStore.nekoArts"
@@ -18,23 +28,25 @@ animeStore.getArts(false);
 				:alt="image.artist_name"
 				:url="image.url"
 			>
-				<div class="flex items-center gap-1">
+				<UButtonGroup>
 					<UButton
-						class="font-bold text-lg"
-						:to="image.artist_href"
-						variant="link"
-						:label="image.artist_name"
+						class="font-bold"
+						:to="image.artist_href || '#'"
+						variant="subtle"
+						:label="image.artist_name || 'Unknown'"
 						target="_blank"
 					/>
-					•
+
 					<UButton
+						v-if="image.source_url"
 						:to="image.source_url"
 						:external="true"
+						class="text-xs"
 						label="Source"
 						variant="subtle"
 						target="_blank"
 					/>
-				</div>
+				</UButtonGroup>
 			</ImageCard>
 		</Grid>
 
