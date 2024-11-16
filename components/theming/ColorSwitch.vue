@@ -48,30 +48,26 @@ const colors = [
 </script>
 
 <template>
-	<ClientOnly>
-		<UDropdownMenu :items="colors">
-			<UButton icon="i-heroicons-paint-brush-solid" />
+	<UDropdownMenu :items="colors">
+		<UButton icon="i-heroicons-paint-brush-solid" />
 
-			<template
-				#item="{
-					item,
-				}: {
-					item: {
-						label: string;
-						className: string;
-						click: () => void;
-					};
-				}"
+		<template
+			#item="{
+				item,
+			}: {
+				item: {
+					label: string;
+					className: string;
+					click: () => void;
+				};
+			}"
+		>
+			<p
+				class="underline decoration-2 underline-offset-4 decoration"
+				:class="item.className"
 			>
-				<p
-					class="underline decoration-2 underline-offset-4 decoration"
-					:class="item.className"
-				>
-					{{
-						item.label.charAt(0).toUpperCase() + item.label.slice(1)
-					}}
-				</p>
-			</template>
-		</UDropdownMenu>
-	</ClientOnly>
+				{{ item.label.charAt(0).toUpperCase() + item.label.slice(1) }}
+			</p>
+		</template>
+	</UDropdownMenu>
 </template>

@@ -9,15 +9,9 @@ export const navigation: NavigationLink[] = [
 	},
 	{
 		id: 2,
-		to: '/about',
-		label: 'About',
-		icon: 'i-heroicons-information-circle-solid',
-	},
-	{
-		id: 3,
-		to: '/help',
-		label: 'Help',
-		icon: 'i-heroicons-user-group-solid',
+		to: '/settings',
+		label: 'Settings',
+		icon: 'i-heroicons-cog-6-tooth-solid',
 	},
 ];
 

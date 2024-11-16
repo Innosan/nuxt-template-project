@@ -3,7 +3,6 @@ import { useSettingsStore } from '~/stores/settings';
 
 const settingsStore = useSettingsStore();
 const appConfig = useAppConfig();
-const route = useRoute();
 
 appConfig.ui.colors.primary = settingsStore.primaryColor;
 </script>
@@ -12,11 +11,8 @@ appConfig.ui.colors.primary = settingsStore.primaryColor;
 	<UApp :toaster="{ position: 'bottom-right' }">
 		<AppHeader />
 
-		<div
-			v-auto-animate
-			class="page-container pt-6"
-		>
-			<NuxtPage :key="route.path" />
+		<div class="page-container pt-6">
+			<NuxtPage />
 		</div>
 	</UApp>
 </template>

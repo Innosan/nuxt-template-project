@@ -9,22 +9,10 @@ const appConfig = useAppConfig();
 				{{ appConfig.appName }}
 			</h1>
 
-			<TopNavigation
-				class="md:flex hidden"
+			<AppNavigation
 				:links="navigation"
+				:title="appConfig.appName as string"
 			/>
-		</div>
-
-		<div>
-			<SidebarNavigation
-				class="block md:hidden"
-				:navigation="navigation"
-			/>
-
-			<div class="md:flex hidden gap-4 items-center">
-				<ThemeSwitch />
-				<ColorSwitch />
-			</div>
 		</div>
 	</header>
 </template>
