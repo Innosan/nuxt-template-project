@@ -9,7 +9,10 @@ const appConfig = useAppConfig();
 				{{ appConfig.appName }}
 			</h1>
 
-			<TopNavigation class="md:flex hidden" :links="navigation" />
+			<TopNavigation
+				class="md:flex hidden"
+				:links="navigation"
+			/>
 		</div>
 
 		<div>

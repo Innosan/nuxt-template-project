@@ -16,7 +16,11 @@ const props = defineProps({
 <template>
 	<UModal :title="alt">
 		<template #body>
-			<NuxtImg :src="url" :alt="alt" class="w-full rounded-2xl" />
+			<NuxtImg
+				:src="url"
+				:alt="alt"
+				class="w-full rounded-2xl"
+			/>
 		</template>
 	</UModal>
 </template>

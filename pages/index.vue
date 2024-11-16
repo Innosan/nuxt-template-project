@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useAnimeStore } from "~/stores/anime";
+import { useAnimeStore } from '~/stores/anime';
 
 const animeStore = useAnimeStore();
 animeStore.getArts(false);
@@ -12,7 +12,10 @@ animeStore.getArts(false);
 		:is-divided="false"
 	>
 		<TitledBlock title="">
-			<Grid v-auto-animate>
+			<Grid
+				v-auto-animate
+				lg="lg:grid-cols-6"
+			>
 				<ImageCard
 					v-for="image in animeStore.nekoArts"
 					:key="image.url"
@@ -24,31 +27,31 @@ animeStore.getArts(false);
 							class="font-bold text-lg"
 							:to="image.artist_href"
 							variant="link"
+							:label="image.artist_name"
 							target="_blank"
-							>{{ image.artist_name }}</UButton
-						>
+						/>
 						•
 						<UButton
 							:to="image.source_url"
 							:external="true"
+							label="Source"
 							variant="subtle"
 							target="_blank"
-							>Source</UButton
-						>
+						/>
 					</div>
 				</ImageCard>
 			</Grid>
 
 			<UButton
 				label="Load more"
-				@click="animeStore.getArts(true)"
 				icon="i-heroicons-chevron-down"
+				@click="animeStore.getArts(true)"
 			/>
 
 			<UButton
 				label="Refresh"
-				@click="animeStore.getArts(false)"
 				icon="i-heroicons-arrow-path"
+				@click="animeStore.getArts(false)"
 			/>
 		</TitledBlock>
 	</PageSection>

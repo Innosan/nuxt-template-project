@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FullSizeImage from "~/components/modals/FullSizeImage.vue";
+import FullSizeImage from '~/components/modals/FullSizeImage.vue';
 
 const modal = useModal();
 

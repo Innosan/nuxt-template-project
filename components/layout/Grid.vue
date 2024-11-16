@@ -1,24 +1,36 @@
 <script setup lang="ts">
-import {
-	classNames,
-	defaultGridOptions,
-	type GridOptions,
-} from "~/types/ui/GridOptions";
+import type { PropType } from 'vue';
+
+type GridCols = 1 | 2 | 3 | 4 | 5 | 6;
+type TailwindGridCols<Prefix extends string = ''> =
+	`${Prefix}grid-cols-${GridCols}`;
 
 const props = defineProps({
-	options: {
-		type: Object as PropType<GridOptions>,
-		default: () => defaultGridOptions,
+	columns: {
+		type: String as PropType<TailwindGridCols>,
+		default: 'grid-cols-1',
+	},
+	md: {
+		type: String as PropType<TailwindGridCols<'md:'>>,
+		default: 'md:grid-cols-2',
+	},
+	lg: {
+		type: String as PropType<TailwindGridCols<'lg:'>>,
+		default: 'lg:grid-cols-4',
+	},
+	gap: {
+		type: String,
+		default: 'gap-4',
 	},
 });
 
-// TODO: Add support for responsive columns (Need to wait for Nuxt UI and Tailwind v4 to update)
+const classes = computed(() => {
+	return `grid ${props.gap} ${props.columns} ${props.md} ${props.lg}`;
+});
 </script>
 
 <template>
-	<div
-		class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6"
-	>
+	<div :class="classes">
 		<slot />
 	</div>
 </template>
