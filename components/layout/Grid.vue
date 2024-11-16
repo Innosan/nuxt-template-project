@@ -18,6 +18,10 @@ const props = defineProps({
 		type: String as PropType<TailwindGridCols<'lg:'>>,
 		default: 'lg:grid-cols-4',
 	},
+	xl: {
+		type: String as PropType<TailwindGridCols<'xl:'>>,
+		default: 'xl:grid-cols-6',
+	},
 	gap: {
 		type: String,
 		default: 'gap-4',
@@ -25,7 +29,7 @@ const props = defineProps({
 });
 
 const classes = computed(() => {
-	return `grid ${props.gap} ${props.columns} ${props.md} ${props.lg}`;
+	return `grid ${props.gap} ${props.columns} ${props.md} ${props.lg} ${props.xl}`;
 });
 </script>
 

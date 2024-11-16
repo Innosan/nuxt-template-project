@@ -1,5 +1,3 @@
-import type { NotificationColor } from "#ui/types";
-
 export enum Toasts {
 	SUCCESS,
 	ERROR,
@@ -8,7 +6,7 @@ export enum Toasts {
 
 export interface Notification {
 	title: string;
-	color: NotificationColor;
+	color: string;
 	icon: string;
 	description?: string;
 }
@@ -20,31 +18,31 @@ export const getToast = (
 	switch (type) {
 		case Toasts.SUCCESS:
 			return {
-				title: "Success!",
-				color: "green",
-				icon: "i-heroicons-check-circle",
+				title: 'Success!',
+				color: 'green',
+				icon: 'i-heroicons-check-circle',
 				description,
 			};
 		case Toasts.ERROR:
 			return {
-				title: "An error occurred!",
-				color: "red",
-				icon: "i-heroicons-x-circle",
-				description: description + ". Please try again.",
+				title: 'An error occurred!',
+				color: 'red',
+				icon: 'i-heroicons-x-circle',
+				description: description + '. Please try again.',
 			};
 		case Toasts.INFO:
 			return {
-				title: "New info!",
-				color: "blue",
-				icon: "i-heroicons-information-circle",
+				title: 'New info!',
+				color: 'blue',
+				icon: 'i-heroicons-information-circle',
 				description,
 			};
 		default:
 			return {
-				title: "Notification",
-				color: "gray",
-				icon: "i-heroicons-bell",
-				description: "This is a notification.",
+				title: 'Notification',
+				color: 'gray',
+				icon: 'i-heroicons-bell',
+				description: 'This is a notification.',
 			};
 	}
 };

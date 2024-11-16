@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSettingsStore } from "~/stores/settings";
+import { useSettingsStore } from '~/stores/settings';
 
 const settingsStore = useSettingsStore();
 const appConfig = useAppConfig();
@@ -12,13 +12,16 @@ appConfig.ui.colors.primary = settingsStore.primaryColor;
 	<UApp :toaster="{ position: 'bottom-right' }">
 		<AppHeader />
 
-		<div class="page-container pt-6" v-auto-animate>
+		<div
+			v-auto-animate
+			class="page-container pt-6"
+		>
 			<NuxtPage :key="route.path" />
 		</div>
 	</UApp>
 </template>
 
 <style>
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
 </style>

@@ -16,13 +16,14 @@ const props = defineProps({
 </script>
 
 <template>
-	<UCard @click="modal.open(FullSizeImage, { url: url, alt: alt })">
+	<UCard class="transition-all hover:scale-105 hover:shadow-md">
 		<template #header>
 			<NuxtImg
 				loading="lazy"
-				class="h-56 transition-all object-top rounded-2xl content-center w-full object-cover hover:object-center hover:cursor-zoom-in"
+				class="h-56 object-top rounded-2xl content-center w-full object-cover hover:cursor-zoom-in"
 				:src="url"
 				:alt="'Neko art by' + alt"
+				@click="modal.open(FullSizeImage, { url: url, alt: alt })"
 			/>
 		</template>
 

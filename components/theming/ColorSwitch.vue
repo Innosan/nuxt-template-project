@@ -10,37 +10,37 @@ const changeTheme = (color: string) => {
 const colors = [
 	[
 		{
-			label: "blue",
-			className: "decoration-blue-500",
+			label: 'blue',
+			className: 'decoration-blue-500',
 			select: () => {
-				changeTheme("blue");
+				changeTheme('blue');
 			},
 		},
 	],
 	[
 		{
-			label: "red",
-			className: "decoration-red-500",
+			label: 'red',
+			className: 'decoration-red-500',
 			select: () => {
-				changeTheme("red");
+				changeTheme('red');
 			},
 		},
 	],
 	[
 		{
-			label: "green",
-			className: "decoration-green-500",
+			label: 'green',
+			className: 'decoration-green-500',
 			select: () => {
-				changeTheme("green");
+				changeTheme('green');
 			},
 		},
 	],
 	[
 		{
-			label: "violet",
-			className: "decoration-violet-500",
+			label: 'violet',
+			className: 'decoration-violet-500',
 			select: () => {
-				changeTheme("violet");
+				changeTheme('violet');
 			},
 		},
 	],
