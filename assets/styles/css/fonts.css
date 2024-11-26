@@ -1,5 +1,8 @@
+/* ../../../public/fonts/Manrope-VariableFont_wght.ttf - dev */
+/* /fonts/Manrope-VariableFont_wght.ttf - prod */
+
 @font-face {
-	src: url("/fonts/Manrope-VariableFont_wght.ttf");
+	src: url('../../../public/fonts/Manrope-VariableFont_wght.ttf');
 	font-family: Manrope;
 }
 
