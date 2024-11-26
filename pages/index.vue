@@ -7,7 +7,7 @@ animeStore.getArts(false);
 
 <template>
 	<PageSection
-		title="Welcome to the homepage"
+		:title="$t('headings.main')"
 		icon="i-heroicons-home-solid"
 		:is-divided="false"
 	>

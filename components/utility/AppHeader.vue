@@ -13,6 +13,8 @@ const appConfig = useAppConfig();
 				:links="navigation"
 				:title="appConfig.appName as string"
 			/>
+
+			<LanguageSwitcher />
 		</div>
 	</header>
 </template>

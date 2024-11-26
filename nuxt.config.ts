@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 		'@pinia/nuxt',
 		'@pinia-plugin-persistedstate/nuxt',
 		'@nuxt/eslint',
+		'@nuxtjs/i18n',
 		'@nuxt/image', // Delete this line if you don't need it (and from package.json)
 	],
 
@@ -31,6 +32,23 @@ export default defineNuxtConfig({
 				semi: true,
 			},
 		},
+	},
+
+	i18n: {
+		strategy: 'no_prefix',
+		defaultLocale: 'ru',
+		locales: [
+			{
+				code: 'ru',
+				file: '/locales/ru.json',
+				name: 'Русский',
+			},
+			{
+				code: 'en',
+				file: '/locales/en.json',
+				name: 'English',
+			},
+		],
 	},
 
 	image: {
