@@ -1,17 +1,33 @@
 <script setup lang="ts">
-import type { PropType } from 'vue';
-import type { NavigationLink } from '~/types/utility/NavigationLink';
-
 const props = defineProps({
-	links: {
-		type: Array as PropType<Array<NavigationLink>>,
-		required: true,
-	},
 	title: {
 		type: String,
 		required: true,
 	},
 });
+
+const { t } = useI18n();
+
+const links = computed(() => [
+	{
+		id: 1,
+		to: '/',
+		label: t('navigation.home'),
+		icon: 'i-heroicons-home-solid',
+	},
+	{
+		id: 2,
+		to: '/contact',
+		label: t('navigation.contact'),
+		icon: 'i-heroicons-envelope-solid',
+	},
+	{
+		id: 3,
+		to: '/settings',
+		label: t('navigation.settings'),
+		icon: 'i-heroicons-cog-6-tooth-solid',
+	},
+]);
 </script>
 
 <template>
@@ -37,14 +53,6 @@ const props = defineProps({
 				<UNavigationMenu
 					orientation="vertical"
 					:items="links"
-				/>
-
-				<!-- Socials -->
-				<USeparator icon="i-heroicons-globe-solid" />
-
-				<UNavigationMenu
-					orientation="vertical"
-					:items="socials"
 				/>
 			</template>
 		</USlideover>
