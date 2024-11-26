@@ -1,12 +1,12 @@
 /*
  * CSS
  */
-@import "assets/styles/css/app.css";
-@import "assets/styles/css/fonts.css";
-@import "assets/styles/css/width.css";
-@import "assets/styles/css/shapes.css";
+@import "../../assets/styles/css/app.css";
+@import "../../assets/styles/css/fonts.css";
+@import "../../assets/styles/css/width.css";
+@import "../../assets/styles/css/shapes.css";
 
 /*
  * SCSS
  */
-@import "assets/styles/scss/navigation.scss";
+@import "../../assets/styles/scss/navigation.scss";

@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import { useAnimeStore } from "~/stores/anime";
-import ImageCard from "~/components/layout/ImageCard.vue";
-const toast = useToast();
+import { useAnimeStore } from '~/stores/anime';
 
 const animeStore = useAnimeStore();
 animeStore.getArts(false);
-
-const name = ref("");
 </script>
 
 <template>
@@ -15,38 +11,59 @@ const name = ref("");
 		icon="i-heroicons-home-solid"
 		:is-divided="false"
 	>
-		<TitledBlock title="">
-			<Grid v-auto-animate>
-				<ImageCard
-					v-for="image in animeStore.nekoArts"
-					:key="image.url"
-					:alt="image.artist_name"
-					:url="image.url"
-				>
-					<div class="flex items-center gap-1">
-						<NuxtLink
-							class="font-bold text-lg"
-							:to="image.artist_href"
-							:external="true"
-							target="_blank"
-							>{{ image.artist_name }}</NuxtLink
-						>
-						•
-						<NuxtLink
-							:to="image.source_url"
-							:external="true"
-							target="_blank"
-							>Source</NuxtLink
-						>
-					</div>
-				</ImageCard>
-				<UButton
-					label="Load more"
-					@click="animeStore.getArts(true)"
-					icon="i-heroicons-chevron-down"
-					class="col-span-full"
-				/>
-			</Grid>
-		</TitledBlock>
+		<UButtonGroup>
+			<UButton
+				v-for="tag in animeStore.categories"
+				:key="tag"
+				variant="subtle"
+				:label="tag"
+				@click="animeStore.getArtsByTag(tag)"
+			/>
+		</UButtonGroup>
+
+		<Grid v-auto-animate>
+			<ImageCard
+				v-for="image in animeStore.nekoArts"
+				:key="image.url"
+				:alt="image.artist_name"
+				:url="image.url"
+			>
+				<UButtonGroup>
+					<UButton
+						class="font-bold"
+						:to="image.artist_href || '#'"
+						variant="subtle"
+						:label="image.artist_name || 'Unknown'"
+						target="_blank"
+					/>
+
+					<UButton
+						v-if="image.source_url"
+						:to="image.source_url"
+						:external="true"
+						class="text-xs"
+						label="Source"
+						variant="subtle"
+						target="_blank"
+					/>
+				</UButtonGroup>
+			</ImageCard>
+		</Grid>
+
+		<div class="flex gap-4">
+			<UButton
+				label="Load more"
+				icon="i-heroicons-chevron-down"
+				:loading="animeStore.isRefilling"
+				@click="animeStore.getArts(true)"
+			/>
+
+			<UButton
+				label="Refresh"
+				icon="i-heroicons-arrow-path"
+				:loading="animeStore.isLoading"
+				@click="animeStore.getArts(false)"
+			/>
+		</div>
 	</PageSection>
 </template>

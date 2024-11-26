@@ -1,10 +1,10 @@
-import { persistOptions } from "~/utils/persistence";
+import { persistOptions } from '~/utils/persistence';
 
 export const useSettingsStore = defineStore(
-	"settings-store",
+	'settings-store',
 	() => {
-		const primaryColor = ref("violet");
-		const grayColor = ref("zinc");
+		const primaryColor = ref('violet');
+		const grayColor = ref('zinc');
 
 		const setPrimaryColor = (color: string) => {
 			primaryColor.value = color;
