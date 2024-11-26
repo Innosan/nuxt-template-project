@@ -1,5 +1,10 @@
 {
 	"headings": {
 		"main": "Welcome to the homepage"
+	},
+	"navigation": {
+		"home": "Home",
+		"contact": "Contact",
+		"settings": "Settings"
 	}
 }

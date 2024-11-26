@@ -9,10 +9,7 @@ const appConfig = useAppConfig();
 				{{ appConfig.appName }}
 			</h1>
 
-			<AppNavigation
-				:links="navigation"
-				:title="appConfig.appName as string"
-			/>
+			<AppNavigation :title="appConfig.appName as string" />
 
 			<LanguageSwitcher />
 		</div>
