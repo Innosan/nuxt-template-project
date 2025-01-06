@@ -8,42 +8,34 @@ const changeTheme = (color: string) => {
 };
 
 const colors = [
-	[
-		{
-			label: 'blue',
-			className: 'decoration-blue-500',
-			select: () => {
-				changeTheme('blue');
-			},
+	{
+		label: 'Blue',
+		className: 'decoration-blue-400',
+		onSelect: () => {
+			changeTheme('blue');
 		},
-	],
-	[
-		{
-			label: 'red',
-			className: 'decoration-red-500',
-			select: () => {
-				changeTheme('red');
-			},
+	},
+	{
+		label: 'Red',
+		className: 'decoration-red-400',
+		onSelect: () => {
+			changeTheme('red');
 		},
-	],
-	[
-		{
-			label: 'green',
-			className: 'decoration-green-500',
-			select: () => {
-				changeTheme('green');
-			},
+	},
+	{
+		label: 'Green',
+		className: 'decoration-green-400',
+		onSelect: () => {
+			changeTheme('green');
 		},
-	],
-	[
-		{
-			label: 'violet',
-			className: 'decoration-violet-500',
-			select: () => {
-				changeTheme('violet');
-			},
+	},
+	{
+		label: 'Violet',
+		className: 'decoration-violet-400',
+		onSelect: () => {
+			changeTheme('violet');
 		},
-	],
+	},
 ];
 </script>
 
@@ -51,22 +43,12 @@ const colors = [
 	<UDropdownMenu :items="colors">
 		<UButton icon="i-heroicons-paint-brush-solid" />
 
-		<template
-			#item="{
-				item,
-			}: {
-				item: {
-					label: string;
-					className: string;
-					click: () => void;
-				};
-			}"
-		>
+		<template #item-label="{ item }">
 			<p
-				class="underline decoration-2 underline-offset-4 decoration"
+				class="underline decoration-2 underline-offset-3 font-bold"
 				:class="item.className"
 			>
-				{{ item.label.charAt(0).toUpperCase() + item.label.slice(1) }}
+				{{ item.label }}
 			</p>
 		</template>
 	</UDropdownMenu>
