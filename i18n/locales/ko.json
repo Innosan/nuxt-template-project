@@ -6,5 +6,8 @@
 		"home": "홈",
 		"contact": "연락처",
 		"settings": "설정"
+	},
+	"buttons": {
+		"change-language": "언어 변경"
 	}
 }

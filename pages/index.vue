@@ -2,7 +2,7 @@
 import { useAnimeStore } from '~/stores/anime';
 
 const animeStore = useAnimeStore();
-animeStore.getArts(false);
+//animeStore.getArts(false);
 </script>
 
 <template>

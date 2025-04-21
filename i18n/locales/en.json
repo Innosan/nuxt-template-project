@@ -6,5 +6,8 @@
 		"home": "Home",
 		"contact": "Contact",
 		"settings": "Settings"
+	},
+	"buttons": {
+		"change-language": "Change language"
 	}
 }

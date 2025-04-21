@@ -6,5 +6,8 @@
 		"home": "Главная",
 		"contact": "Связаться",
 		"settings": "Настройки"
+	},
+	"buttons": {
+		"change-language": "Изменить язык"
 	}
 }

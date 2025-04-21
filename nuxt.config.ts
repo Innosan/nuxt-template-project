@@ -3,8 +3,7 @@ export default defineNuxtConfig({
 		'@nuxt/ui',
 		'@formkit/auto-animate/nuxt',
 		'@pinia/nuxt',
-		'@pinia-plugin-persistedstate/nuxt',
-		'@nuxt/eslint',
+		'pinia-plugin-persistedstate/nuxt',
 		'@nuxtjs/i18n',
 		'@nuxt/image', // Delete this line if you don't need it (and from package.json)
 	],
@@ -15,22 +14,13 @@ export default defineNuxtConfig({
 			pathPrefix: false,
 		},
 	],
-	devtools: { enabled: true },
 
+	devtools: { enabled: true },
 	css: ['~/assets/styles/main.css'],
 
 	ui: {
 		theme: {
 			colors: ['cerise', 'blue', 'green'],
-		},
-	},
-
-	eslint: {
-		config: {
-			stylistic: {
-				indent: 'tab',
-				semi: true,
-			},
 		},
 	},
 
@@ -40,13 +30,18 @@ export default defineNuxtConfig({
 		locales: [
 			{
 				code: 'ru',
-				file: '/locales/ru.json',
+				file: 'ru.json',
 				name: 'Русский',
 			},
 			{
 				code: 'en',
-				file: '/locales/en.json',
+				file: 'en.json',
 				name: 'English',
+			},
+			{
+				code: 'ko',
+				file: 'ko.json',
+				name: '한국어',
 			},
 		],
 	},
@@ -54,4 +49,6 @@ export default defineNuxtConfig({
 	image: {
 		domains: ['nekos.best'],
 	},
+
+	compatibilityDate: '2025-04-21',
 });

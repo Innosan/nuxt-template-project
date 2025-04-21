@@ -22,9 +22,12 @@ export const useAnimeStore = defineStore('anime-store', () => {
 
 	const getArtsWithParams = async (params: FetchParams) => {
 		isLoading.value = true;
+
+		const urlBase = useRuntimeConfig().public.apiUrl;
+
 		const url = params.tag
-			? `https://nekos.best/api/v2/${params.tag}?amount=${params.amount}`
-			: `https://nekos.best/api/v2/${categories.value[0]}?amount=${params.amount}`;
+			? urlBase + `/${params.tag}?amount=${params.amount}`
+			: urlBase + `/${categories.value[0]}?amount=${params.amount}`;
 
 		const data: { results: [] } = await $fetch(url);
 
