@@ -1,4 +1,4 @@
 export type FetchParams = {
-	amount: number;
+	limit: number;
 	tag?: string;
 };

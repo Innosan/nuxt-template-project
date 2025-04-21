@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import FullSizeImage from '~/components/modals/FullSizeImage.vue';
-
-const modal = useModal();
+import { FullSizeImage } from '#components';
 
 const props = defineProps({
 	url: {
@@ -14,6 +12,14 @@ const props = defineProps({
 	},
 });
 
+const overlay = useOverlay();
+const modal = overlay.create(FullSizeImage, {
+	props: {
+		url: props.url,
+		alt: props.alt,
+	},
+});
+
 const isLoading = ref(true);
 
 const onLoad = () => {
@@ -22,7 +28,7 @@ const onLoad = () => {
 </script>
 
 <template>
-	<UCard class="transition-all hover:scale-105 hover:shadow-md">
+	<UCard class="transition-all hover:-translate-y-2 hover:shadow-md">
 		<template #header>
 			<div class="relative h-56">
 				<USkeleton
@@ -37,7 +43,7 @@ const onLoad = () => {
 					:src="url"
 					:alt="'Neko art by' + alt"
 					@load="onLoad"
-					@click="modal.open(FullSizeImage, { url: url, alt: alt })"
+					@click="modal.open()"
 				/>
 			</div>
 		</template>

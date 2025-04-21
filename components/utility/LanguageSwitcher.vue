@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-const { locale, setLocaleCookie } = useI18n();
+const { locale, setLocale, setLocaleCookie } = useI18n();
 
 const items = ref([
 	{ label: 'English', value: 'en' },
 	{ label: 'Русский', value: 'ru' },
+	{ label: '한국어', value: 'ko' },
 ]);
 </script>
 
@@ -24,7 +25,8 @@ const items = ref([
 				color="neutral"
 				@click="
 					() => {
-						locale = item.value as 'ru' | 'en';
+						locale = item.value as 'ru' | 'en' | 'ko';
+						setLocale(locale);
 						setLocaleCookie(locale);
 					}
 				"

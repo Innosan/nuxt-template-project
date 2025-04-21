@@ -21,13 +21,14 @@ export const useAnimeStore = defineStore('anime-store', () => {
 	const isRefilling = ref(false);
 
 	const getArtsWithParams = async (params: FetchParams) => {
+		const config = useRuntimeConfig(); // Access runtime config
+		const apiUrl = config.public.apiBase;
+
 		isLoading.value = true;
 
-		const urlBase = useRuntimeConfig().public.apiUrl;
-
 		const url = params.tag
-			? urlBase + `/${params.tag}?amount=${params.amount}`
-			: urlBase + `/${categories.value[0]}?amount=${params.amount}`;
+			? apiUrl + `/${params.tag}?amount=${params.limit}`
+			: apiUrl + `/${categories.value[0]}?amount=${params.limit}`;
 
 		const data: { results: [] } = await $fetch(url);
 
@@ -37,7 +38,7 @@ export const useAnimeStore = defineStore('anime-store', () => {
 
 	const getArts = async (
 		refill: boolean,
-		params: FetchParams = { amount: 12 },
+		params: FetchParams = { limit: 12 },
 	) => {
 		isLoading.value = true;
 		isRefilling.value = refill;
@@ -57,7 +58,7 @@ export const useAnimeStore = defineStore('anime-store', () => {
 	const getArtsByTag = async (tag: string) => {
 		isLoading.value = true;
 
-		nekoArts.value = await getArtsWithParams({ amount: 12, tag });
+		nekoArts.value = await getArtsWithParams({ limit: 12, tag });
 		isLoading.value = false;
 	};
 

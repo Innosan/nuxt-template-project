@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const modal = useModal();
-
 const props = defineProps({
 	url: {
 		type: String,
@@ -12,6 +10,8 @@ const props = defineProps({
 	},
 });
 
+const emit = defineEmits<{ close: [boolean] }>();
+
 const downloadImage = () => {
 	window.open(props.url, '_blank');
 };
@@ -19,6 +19,7 @@ const downloadImage = () => {
 
 <template>
 	<UModal
+		:close="{ onClick: () => emit('close', false) }"
 		:title="alt"
 		:description="'Art by ' + alt"
 	>
@@ -33,6 +34,11 @@ const downloadImage = () => {
 			<UButton
 				label="Download"
 				@click="downloadImage()"
+			/>
+
+			<UButton
+				label="Close"
+				@click="emit('close', false)"
 			/>
 		</template>
 	</UModal>

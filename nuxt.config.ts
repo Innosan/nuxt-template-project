@@ -8,6 +8,13 @@ export default defineNuxtConfig({
 		'@nuxt/image', // Delete this line if you don't need it (and from package.json)
 	],
 
+	runtimeConfig: {
+		// Public keys that are exposed to the client
+		public: {
+			apiBase: process.env.NUXT_PUBLIC_API_BASE || '/api',
+		},
+	},
+
 	components: [
 		{
 			path: '~/components',
