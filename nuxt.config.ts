@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 		'@pinia/nuxt',
 		'pinia-plugin-persistedstate/nuxt',
 		'@nuxtjs/i18n',
+		"@nuxt/eslint",
 		'@nuxt/image', // Delete this line if you don't need it (and from package.json)
 	],
 

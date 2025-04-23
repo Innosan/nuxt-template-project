@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import * as locales from '@nuxt/ui/locale';
-import { useSettingsStore } from '~/stores/settings';
+import * as locales from "@nuxt/ui/locale";
+import { useSettingsStore } from "~/stores/settings";
 
 const { locale } = useI18n();
 const appConfig = useAppConfig();
@@ -20,10 +20,7 @@ useHead({
 </script>
 
 <template>
-	<UApp
-		:toaster="{ position: 'bottom-right' }"
-		:locale="locales[locale]"
-	>
+	<UApp :toaster="{ position: 'bottom-right' }" :locale="locales[locale]">
 		<AppHeader />
 
 		<div class="page-container pt-6">
@@ -31,8 +28,3 @@ useHead({
 		</div>
 	</UApp>
 </template>
-
-<style>
-@import 'tailwindcss';
-@import '@nuxt/ui';
-</style>

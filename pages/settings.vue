@@ -1,12 +1,10 @@
-<script lang="ts" setup></script>
-
 <template>
 	<TitledBlock title="Theme and feel">
-		<div class="md:flex hidden gap-4 items-center">
-			<ClientOnly>
+		<ClientOnly>
+			<div class="flex gap-4 items-center">
 				<ThemeSwitch />
 				<ColorSwitch />
-			</ClientOnly>
-		</div>
+			</div>
+		</ClientOnly>
 	</TitledBlock>
 </template>

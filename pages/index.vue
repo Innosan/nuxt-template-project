@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useAnimeStore } from '~/stores/anime';
+import { useAnimeStore } from "~/stores/anime";
 
 const animeStore = useAnimeStore();
 animeStore.getArts(false);
