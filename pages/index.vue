@@ -62,6 +62,7 @@ animeStore.getArts(false);
 				label="Refresh"
 				icon="i-heroicons-arrow-path"
 				:loading="animeStore.isLoading"
+				variant="subtle"
 				@click="animeStore.getArts(false)"
 			/>
 		</div>

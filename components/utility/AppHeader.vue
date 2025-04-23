@@ -3,15 +3,23 @@ const appConfig = useAppConfig();
 </script>
 
 <template>
-	<header class="flex justify-between items-center gap-4">
-		<h1 class="font-black text-2xl text-nowrap text-primary-400">
-			{{ appConfig.appName }}
-		</h1>
+	<header class="flex items-center justify-between gap-4">
+		<div class="flex items-center gap-3">
+			<UIcon
+				v-if="appConfig.appIcon"
+				:name="appConfig.appIcon"
+				class="bg-primary-400 h-8 w-8"
+			/>
 
-		<div class="flex gap-3 items-center">
+			<h1 class="text-primary-400 text-2xl font-black text-nowrap">
+				{{ appConfig.appName }}
+			</h1>
+		</div>
+
+		<div class="flex items-center gap-3">
 			<AppNavigation :title="appConfig.appName as string" />
 
-			<LanguageSwitcher />
+			<LanguageSwitcher class="hidden md:inline-flex" />
 		</div>
 	</header>
 </template>

@@ -9,6 +9,6 @@ export const defaultSettings = {
 
 	lang: "en",
 
-	showIcon: false,
+	showIcon: true,
 	showAppName: true,
 };
