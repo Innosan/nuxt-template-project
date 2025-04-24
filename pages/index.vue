@@ -52,14 +52,16 @@ animeStore.getArts(false);
 
 		<div class="flex gap-4">
 			<UButton
-				label="Load more"
+				class="w-full"
+				:label="$t('buttons.load-more')"
 				icon="i-heroicons-chevron-down"
 				:loading="animeStore.isRefilling"
 				@click="animeStore.getArts(true)"
 			/>
 
 			<UButton
-				label="Refresh"
+				class="w-full"
+				:label="$t('buttons.refresh')"
 				icon="i-heroicons-arrow-path"
 				:loading="animeStore.isLoading"
 				variant="subtle"

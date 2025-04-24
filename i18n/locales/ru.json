@@ -8,6 +8,18 @@
 		"settings": "Настройки"
 	},
 	"buttons": {
-		"change-language": "Изменить язык"
+		"change-language": "Изменить язык",
+		"load-more": "Загрузить больше",
+		"refresh": "Обновить"
+	},
+	"settings": {
+		"theme": {
+			"label": "Тема",
+			"description": "Выберите тему для приложения"
+		},
+		"color": {
+			"label": "Цвет",
+			"description": "Выберите цвет для приложения"
+		}
 	}
 }

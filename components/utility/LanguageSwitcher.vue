@@ -1,17 +1,13 @@
 <script lang="ts" setup>
-const { locale, setLocale, setLocaleCookie } = useI18n();
+import { languages } from "~/i18n/locales/languages";
 
-const items = ref([
-	{ label: "English", value: "en" },
-	{ label: "Русский", value: "ru" },
-	{ label: "한국어", value: "ko" },
-]);
+const { locale, setLocale, setLocaleCookie } = useI18n();
 </script>
 
 <template>
-	<UDropdownMenu :items="items">
+	<UDropdownMenu :items="languages">
 		<UButton
-			class="cursor-pointer"
+			class="w-full cursor-pointer md:w-fit"
 			icon="i-heroicons-language-20-solid"
 			variant="solid"
 			color="primary"

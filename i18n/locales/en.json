@@ -8,6 +8,18 @@
 		"settings": "Settings"
 	},
 	"buttons": {
-		"change-language": "Change language"
+		"change-language": "Change language",
+		"load-more": "Load more",
+		"refresh": "Refresh"
+	},
+	"settings": {
+		"theme": {
+			"label": "Theme",
+			"description": "Select the theme for the application"
+		},
+		"color": {
+			"label": "Color",
+			"description": "Select the color for the application"
+		}
 	}
 }
