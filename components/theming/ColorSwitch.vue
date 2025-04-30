@@ -9,31 +9,31 @@ const changeTheme = (color: string) => {
 
 const colors = [
 	{
-		label: 'Blue',
-		className: 'decoration-blue-400',
+		label: "Blue",
+		className: "decoration-blue-400",
 		onSelect: () => {
-			changeTheme('blue');
+			changeTheme("blue");
 		},
 	},
 	{
-		label: 'Red',
-		className: 'decoration-red-400',
+		label: "Red",
+		className: "decoration-red-400",
 		onSelect: () => {
-			changeTheme('red');
+			changeTheme("red");
 		},
 	},
 	{
-		label: 'Green',
-		className: 'decoration-green-400',
+		label: "Green",
+		className: "decoration-green-400",
 		onSelect: () => {
-			changeTheme('green');
+			changeTheme("green");
 		},
 	},
 	{
-		label: 'Violet',
-		className: 'decoration-violet-400',
+		label: "Violet",
+		className: "decoration-violet-400",
 		onSelect: () => {
-			changeTheme('violet');
+			changeTheme("violet");
 		},
 	},
 ];
@@ -45,7 +45,7 @@ const colors = [
 
 		<template #item-label="{ item }">
 			<p
-				class="underline decoration-2 underline-offset-3 font-bold"
+				class="font-bold underline decoration-2 underline-offset-3"
 				:class="item.className"
 			>
 				{{ item.label }}

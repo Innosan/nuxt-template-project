@@ -4,7 +4,7 @@ export enum Toasts {
 	INFO,
 }
 
-export interface Notification {
+export interface Toast {
 	title: string;
 	color: string;
 	icon: string;
@@ -14,35 +14,35 @@ export interface Notification {
 export const getToast = (
 	type: Toasts,
 	description?: string,
-): Partial<Notification> => {
+): Partial<Toast> => {
 	switch (type) {
 		case Toasts.SUCCESS:
 			return {
-				title: 'Success!',
-				color: 'green',
-				icon: 'i-heroicons-check-circle',
+				title: "Success!",
+				color: "success",
+				icon: "i-heroicons-check-circle",
 				description,
 			};
 		case Toasts.ERROR:
 			return {
-				title: 'An error occurred!',
-				color: 'red',
-				icon: 'i-heroicons-x-circle',
-				description: description + '. Please try again.',
+				title: "An error occurred!",
+				color: "error",
+				icon: "i-heroicons-x-circle",
+				description: description + ". Please try again.",
 			};
 		case Toasts.INFO:
 			return {
-				title: 'New info!',
-				color: 'blue',
-				icon: 'i-heroicons-information-circle',
+				title: "New info!",
+				color: "info",
+				icon: "i-heroicons-information-circle",
 				description,
 			};
 		default:
 			return {
-				title: 'Notification',
-				color: 'gray',
-				icon: 'i-heroicons-bell',
-				description: 'This is a notification.',
+				title: "Notification",
+				color: "neutral",
+				icon: "i-heroicons-bell",
+				description: "This is a notification.",
 			};
 	}
 };

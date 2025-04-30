@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { languages } from "~/i18n/locales/languages";
+import { languages } from "~/i18n/languages";
 
 const { locale, setLocale, setLocaleCookie } = useI18n();
 </script>

@@ -1,62 +1,74 @@
 export default defineNuxtConfig({
 	modules: [
-		'@nuxt/ui',
-		'@formkit/auto-animate/nuxt',
-		'@pinia/nuxt',
-		'pinia-plugin-persistedstate/nuxt',
-		'@nuxtjs/i18n',
+		"@nuxt/ui",
+		"@pinia/nuxt",
+		"pinia-plugin-persistedstate/nuxt",
 		"@nuxt/eslint",
-		'@nuxt/image', // Delete this line if you don't need it (and from package.json)
+
+		"@formkit/auto-animate/nuxt",
+
+		// @feature/i18n - start
+		"@nuxtjs/i18n",
+		// @feature/i18n - end
+
+		// @feature/auth - start
+		"@nuxtjs/supabase",
+		// @feature/auth - end
 	],
 
+	// @feature/networking - start
 	runtimeConfig: {
-		// Public keys that are exposed to the client
 		public: {
-			apiBase: process.env.NUXT_PUBLIC_API_BASE || '/api',
+			apiBase: process.env.NUXT_PUBLIC_API_BASE || "/api",
 		},
 	},
+	// @feature/networking - end
 
 	components: [
 		{
-			path: '~/components',
+			path: "~/components",
 			pathPrefix: false,
 		},
 	],
 
 	devtools: { enabled: true },
-	css: ['~/assets/styles/main.css'],
+	css: ["~/assets/styles/main.css"],
 
 	ui: {
 		theme: {
-			colors: ['cerise', 'blue', 'green'],
+			colors: ["cerise", "blue", "green"],
 		},
 	},
 
+	// @feature/i18n - start
 	i18n: {
-		strategy: 'no_prefix',
-		defaultLocale: 'ru',
+		strategy: "no_prefix",
+		defaultLocale: "en",
 		locales: [
 			{
-				code: 'ru',
-				file: 'ru.json',
-				name: 'Русский',
+				code: "en",
+				file: "en.json",
+				name: "English",
 			},
 			{
-				code: 'en',
-				file: 'en.json',
-				name: 'English',
+				code: "ru",
+				file: "ru.json",
+				name: "Русский",
 			},
 			{
-				code: 'ko',
-				file: 'ko.json',
-				name: '한국어',
+				code: "ko",
+				file: "ko.json",
+				name: "한국어",
 			},
 		],
 	},
+	// @feature/i18n - end
 
-	image: {
-		domains: ['nekos.best'],
+	// @feature/auth - start
+	supabase: {
+		// Options
 	},
+	// @feature/auth - end
 
-	compatibilityDate: '2025-04-21',
+	compatibilityDate: "2025-04-21",
 });

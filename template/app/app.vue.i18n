@@ -9,9 +9,6 @@ const dir = computed(() => locales[locale.value].dir);
 const settingsStore = useSettingsStore();
 const appConfig = useAppConfig();
 
-const { isAuthed } = useAuth();
-const currentLayout = computed(() => (isAuthed.value ? "authed" : "unauthed"));
-
 appConfig.ui.colors.primary = settingsStore.primaryColor;
 
 useHead({
@@ -24,8 +21,10 @@ useHead({
 
 <template>
 	<UApp :toaster="{ position: 'bottom-right' }" :locale="locales[locale]">
-		<NuxtLayout :name="currentLayout">
+		<AppHeader />
+
+		<div class="page-container pt-6">
 			<NuxtPage />
-		</NuxtLayout>
+		</div>
 	</UApp>
 </template>

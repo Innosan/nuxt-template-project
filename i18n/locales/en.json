@@ -10,7 +10,9 @@
 	"buttons": {
 		"change-language": "Change language",
 		"load-more": "Load more",
-		"refresh": "Refresh"
+		"refresh": "Refresh",
+		"submit": "Submit",
+		"logout": "Logout"
 	},
 	"settings": {
 		"theme": {
@@ -20,6 +22,26 @@
 		"color": {
 			"label": "Color",
 			"description": "Select the color for the application"
+		}
+	},
+	"validation": {
+		"required": "This field is required",
+		"email": "Please enter a valid email address",
+		"password": "Password must be at least 6 characters long"
+	},
+	"auth": {
+		"labels": {
+			"email": "Email",
+			"password": "Password",
+			"confirm-password": "Confirm Password"
+		},
+		"login": {
+			"label": "Login",
+			"description": "Please enter your credentials to log in"
+		},
+		"register": {
+			"label": "Register",
+			"description": "Create a new account"
 		}
 	}
 }

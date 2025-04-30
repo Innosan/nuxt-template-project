@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import type { PropType } from 'vue';
-import { type SectionSize, SectionSizes } from '~/types/ui/SectionSizes';
+import type { PropType } from "vue";
+import { type SectionSize, SectionSizes } from "~/types/ui/SectionSizes";
 
-const props = defineProps({
+defineProps({
 	title: {
 		type: String,
-		required: true,
+		default: "",
 	},
 	icon: {
 		type: String,
-		default: '',
+		default: "",
 	},
 	size: {
-		type: Object as PropType<SectionSize>,
+		type: Object as PropType,
 		default: () => SectionSizes.md,
 	},
 	isDivided: {
@@ -23,11 +23,9 @@ const props = defineProps({
 </script>
 
 <template>
-	<section
-		class="flex flex-col"
-		:class="size.sectionSpacing"
-	>
+	<section class="flex flex-col" :class="size.sectionSpacing">
 		<SectionTitle
+			v-if="title || icon"
 			:title="title"
 			:icon="icon"
 			:size="size"
