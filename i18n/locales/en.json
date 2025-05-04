@@ -5,7 +5,8 @@
 	"navigation": {
 		"home": "Home",
 		"contact": "Contact",
-		"settings": "Settings"
+		"settings": "Settings",
+		"articles": "Articles"
 	},
 	"buttons": {
 		"change-language": "Change language",
@@ -79,5 +80,12 @@
 			"heading": "Essential Documentation",
 			"description": "Visit the official documentation for tools that are essential for building your app, including Nuxt, Nuxt UI, and Supabase."
 		}
+	},
+	"articles": {
+		"heading": "Articles",
+		"description": "Read the latest articles",
+		"read": "Read the article",
+		"explore": "Explore the articles",
+		"contribute": "Contribute to the project"
 	}
 }

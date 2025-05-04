@@ -16,10 +16,10 @@ const { locale, setLocale, setLocaleCookie } = useI18n();
 
 		<template #item="{ item }">
 			<UButton
-				class="w-full truncate"
+				class="w-full truncate p-1"
 				:label="item.label"
-				:variant="item.value === locale ? 'outline' : 'ghost'"
-				color="neutral"
+				variant="link"
+				:color="item.value === locale ? 'primary' : 'neutral'"
 				@click="
 					() => {
 						locale = item.value as 'ru' | 'en' | 'ko';

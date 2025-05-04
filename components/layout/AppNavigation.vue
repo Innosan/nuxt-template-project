@@ -22,10 +22,17 @@ const links = computed(() => [
 		onSelect: onItemSelect,
 	},
 	{
-		id: 3,
+		id: 2,
 		to: "/settings",
 		label: t("navigation.settings"),
 		icon: "i-heroicons-cog-6-tooth-solid",
+		onSelect: onItemSelect,
+	},
+	{
+		id: 3,
+		to: "/articles",
+		label: t("navigation.articles"),
+		icon: "i-heroicons-book-open-solid",
 		onSelect: onItemSelect,
 	},
 ]);
