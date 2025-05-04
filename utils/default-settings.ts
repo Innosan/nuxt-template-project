@@ -5,6 +5,9 @@ export const defaultSettings = {
 	primaryColor: "emerald",
 	grayColor: "zinc",
 	errorColor: "red",
+	successColor: "green",
+	warningColor: "yellow",
+	infoColor: "blue",
 	theme: "auto",
 
 	lang: "en",

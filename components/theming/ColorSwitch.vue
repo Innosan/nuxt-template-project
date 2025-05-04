@@ -16,17 +16,10 @@ const colors = [
 		},
 	},
 	{
-		label: "Red",
-		className: "decoration-red-400",
+		label: "Emerald",
+		className: "decoration-emerald-400",
 		onSelect: () => {
-			changeTheme("red");
-		},
-	},
-	{
-		label: "Green",
-		className: "decoration-green-400",
-		onSelect: () => {
-			changeTheme("green");
+			changeTheme("emerald");
 		},
 	},
 	{

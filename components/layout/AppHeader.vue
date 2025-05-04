@@ -18,11 +18,10 @@ const appConfig = useAppConfig();
 
 		<div class="flex items-center gap-3">
 			<AppNavigation :title="appConfig.appName as string" />
-			<!-- @feature/i18 - start -->
-			<LanguageSwitcher class="hidden md:inline-flex" />
-			<!-- @feature/i18 - end -->
+
 			<!-- @feature/auth - start -->
-			<LogOutButton />
+			<SignOutButton />
+			<!-- @feature/auth - end -->
 		</div>
 	</header>
 </template>

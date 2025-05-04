@@ -12,6 +12,7 @@ const open = ref(false);
 const onItemSelect = () => {
 	open.value = false;
 };
+
 const links = computed(() => [
 	{
 		id: 1,

@@ -6,10 +6,27 @@ export default defineAppConfig({
 	showIcon: defaultSettings.showIcon,
 
 	ui: {
+		// theming
 		colors: {
 			primary: defaultSettings.primaryColor,
-			error: defaultSettings.errorColor,
 			neutral: defaultSettings.grayColor,
+
+			error: defaultSettings.errorColor,
+			success: defaultSettings.successColor,
+			warning: defaultSettings.warningColor,
+			info: defaultSettings.infoColor,
+		},
+
+		// components override
+		button: {
+			slots: {
+				base: "cursor-pointer",
+			},
+		},
+		tabs: {
+			slots: {
+				trigger: "cursor-pointer",
+			},
 		},
 	},
 });

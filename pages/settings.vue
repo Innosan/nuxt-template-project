@@ -2,18 +2,32 @@
 	<TitledBlock>
 		<ClientOnly>
 			<div class="flex flex-col gap-4 md:flex-row md:flex-wrap">
-				<SettingsItem
+				<ActionCard
 					:title="$t('settings.theme.label')"
 					:description="$t('settings.theme.description')"
 				>
-					<ThemeSwitch />
-				</SettingsItem>
-				<SettingsItem
+					<template #action>
+						<ThemeSwitch />
+					</template>
+				</ActionCard>
+
+				<ActionCard
 					:title="$t('settings.color.label')"
 					:description="$t('settings.color.description')"
 				>
-					<ColorSwitch />
-				</SettingsItem>
+					<template #action>
+						<ColorSwitch />
+					</template>
+				</ActionCard>
+
+				<ActionCard
+					:title="$t('settings.language.label')"
+					:description="$t('settings.language.description')"
+				>
+					<template #action>
+						<LanguageSwitcher />
+					</template>
+				</ActionCard>
 			</div>
 		</ClientOnly>
 	</TitledBlock>

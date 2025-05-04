@@ -4,8 +4,8 @@ const auth = useAuth();
 
 <template>
 	<UButton
-		:label="$t('buttons.logout')"
-		@click="() => auth.signOut()"
+		:label="$t('auth.buttons.sign-out')"
 		icon="i-heroicons-arrow-right-on-rectangle-solid"
+		@click="() => auth.signOut()"
 	/>
 </template>

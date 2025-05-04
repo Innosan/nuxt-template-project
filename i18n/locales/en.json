@@ -11,8 +11,7 @@
 		"change-language": "Change language",
 		"load-more": "Load more",
 		"refresh": "Refresh",
-		"submit": "Submit",
-		"logout": "Logout"
+		"submit": "Submit"
 	},
 	"settings": {
 		"theme": {
@@ -22,12 +21,11 @@
 		"color": {
 			"label": "Color",
 			"description": "Select the color for the application"
+		},
+		"language": {
+			"label": "Language",
+			"description": "Select the language for the application"
 		}
-	},
-	"validation": {
-		"required": "This field is required",
-		"email": "Please enter a valid email address",
-		"password": "Password must be at least 6 characters long"
 	},
 	"auth": {
 		"labels": {
@@ -35,13 +33,51 @@
 			"password": "Password",
 			"confirm-password": "Confirm Password"
 		},
+		"buttons": {
+			"login": "Login",
+			"register": "Register",
+			"submit": "Submit",
+			"sign-out": "Sign Out"
+		},
 		"login": {
-			"label": "Login",
 			"description": "Please enter your credentials to log in"
 		},
 		"register": {
-			"label": "Register",
 			"description": "Create a new account"
+		},
+		"validation": {
+			"required": "This field is required",
+			"email": "Please enter a valid email address",
+			"password": "Password must be at least 6 characters long"
+		}
+	},
+	"scaffold-page": {
+		"heading": "{appName} is a simple yet powerful Nuxt template",
+		"description": "The only Nuxt template you will ever need",
+		"features": {
+			"heading": "Features",
+			"description": "All the useful features you need",
+			"supabase": "Supabase integration",
+			"base-components": "Base Components for smooth setup",
+			"i18n": "Internationalization support"
+		},
+		"usage": {
+			"heading": "Usage",
+			"description": "How to use the template",
+			"install": "Install the template",
+			"run": "Run the development server",
+			"start": "Start building your app"
+		},
+		"documentation": {
+			"heading": "Documentation",
+			"description": "How to use the template",
+			"read": "Read the documentation",
+			"explore": "Explore the code",
+			"contribute": "Contribute to the project"
+		},
+		"essential-documentation": {
+			"heading": "Essential Documentation",
+			"description": "Visit the official documentation for tools that are essential for building your app, including Nuxt, Nuxt UI, and Supabase."
 		}
 	}
 }

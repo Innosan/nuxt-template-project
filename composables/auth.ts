@@ -1,4 +1,4 @@
-import { getToast } from "~/types/ui/Notification";
+import { getToast, Toasts } from "~/types/ui/Toasts";
 
 export const useAuth = () => {
 	const toast = useToast();
@@ -7,12 +7,10 @@ export const useAuth = () => {
 
 	const isAuthed = computed(() => user.value !== null);
 
-	const error = ref(null);
-	const loading = ref(false);
+	const error = ref("");
 
 	const signIn = async (email: string, password: string) => {
-		loading.value = true;
-		error.value = null;
+		error.value = "";
 
 		try {
 			const { error: signInError } = await client.auth.signInWithPassword(
@@ -24,23 +22,25 @@ export const useAuth = () => {
 
 			if (signInError) throw signInError;
 
-			navigateToHome();
+			await navigateToHome();
 		} catch (err) {
-			error.value = err.message;
+			if (err instanceof Error) {
+				error.value = err.message;
+			} else {
+				error.value = "Unknown error occurred";
+			}
 
-			toast.add({
-				title: "Error",
-				color: "neutral",
-				description: error.value,
-			});
-		} finally {
-			loading.value = false;
+			toast.add(
+				getToast(
+					Toasts.ERROR,
+					error.value || "Error signing in. Please try again.",
+				),
+			);
 		}
 	};
 
 	const signUp = async (email: string, password: string) => {
-		loading.value = true;
-		error.value = null;
+		error.value = "";
 
 		try {
 			const { error: signUpError } = await client.auth.signUp({
@@ -49,55 +49,76 @@ export const useAuth = () => {
 			});
 
 			if (signUpError) throw signUpError;
+
+			await navigateToHome();
 		} catch (err) {
-			error.value = err.message;
+			if (err instanceof Error) {
+				error.value = err.message;
+			} else {
+				error.value = "Unknown error occurred";
+			}
 
-			toast.add({
-				title: "Error",
-				color: "neutral",
-				description: error.value,
-			});
-		} finally {
-			loading.value = false;
-
-			navigateToHome();
+			toast.add(
+				getToast(
+					Toasts.ERROR,
+					error.value || "Error signing up. Please try again.",
+				),
+			);
 		}
 	};
 
 	const signOut = async () => {
-		loading.value = true;
-		error.value = null;
+		error.value = "";
 
 		try {
 			const { error: signOutError } = await client.auth.signOut();
 			if (signOutError) throw signOutError;
+
+			await navigateToLogin();
 		} catch (err) {
-			error.value = err.message;
-		} finally {
-			loading.value = false;
+			if (err instanceof Error) {
+				error.value = err.message;
+			} else {
+				error.value = "Unknown error occurred";
+			}
 
-			navigateToLogin();
+			toast.add(
+				getToast(
+					Toasts.ERROR,
+					error.value || "Error signing out. Please try again.",
+				),
+			);
 		}
 	};
 
-	const navigateToHome = () => {
+	const navigateToHome = async () => {
 		if (user.value) {
-			navigateTo("/");
+			toast.add(getToast(Toasts.SUCCESS, "Welcome back!"));
+
+			await navigateTo("/");
 		}
 	};
 
-	const navigateToLogin = () => {
-		navigateTo("/login");
+	const navigateToLogin = async () => {
+		toast.add(getToast(Toasts.INFO, "Redirecting to login page..."));
+
+		await navigateTo("/login");
 	};
 
 	return {
-		error,
-		loading,
+		// States
 		user,
 		isAuthed,
+
+		// Conditions
+		error,
+
+		// Actions
 		signIn,
 		signUp,
 		signOut,
+
+		// Utilities
 		navigateToHome,
 		navigateToLogin,
 	};

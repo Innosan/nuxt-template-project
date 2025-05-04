@@ -7,9 +7,7 @@ export default defineNuxtConfig({
 
 		"@formkit/auto-animate/nuxt",
 
-		// @feature/i18n - start
 		"@nuxtjs/i18n",
-		// @feature/i18n - end
 
 		// @feature/auth - start
 		"@nuxtjs/supabase",
@@ -36,11 +34,18 @@ export default defineNuxtConfig({
 
 	ui: {
 		theme: {
-			colors: ["cerise", "blue", "green"],
+			colors: [
+				"cerise",
+				"blue",
+				"green",
+				"error",
+				"warning",
+				"success",
+				"info",
+			],
 		},
 	},
 
-	// @feature/i18n - start
 	i18n: {
 		strategy: "no_prefix",
 		defaultLocale: "en",
@@ -55,14 +60,8 @@ export default defineNuxtConfig({
 				file: "ru.json",
 				name: "Русский",
 			},
-			{
-				code: "ko",
-				file: "ko.json",
-				name: "한국어",
-			},
 		],
 	},
-	// @feature/i18n - end
 
 	// @feature/auth - start
 	supabase: {
