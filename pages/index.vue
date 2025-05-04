@@ -32,22 +32,17 @@ definePageMeta({
 					icon="i-heroicons-check-circle-solid"
 					:description="$t('scaffold-page.features.description')"
 				>
-					<div class="flex flex-wrap gap-2">
-						<UButton
-							:label="$t('scaffold-page.features.supabase')"
-							variant="subtle"
-						/>
-						<UButton
-							:label="
-								$t('scaffold-page.features.base-components')
-							"
-							variant="subtle"
-						/>
-						<UButton
-							:label="$t('scaffold-page.features.i18n')"
-							variant="subtle"
-						/>
-					</div>
+					<ul class="list-disc pl-6">
+						<li>
+							{{ $t("scaffold-page.features.supabase") }}
+						</li>
+						<li>
+							{{ $t("scaffold-page.features.base-components") }}
+						</li>
+						<li>
+							{{ $t("scaffold-page.features.i18n") }}
+						</li>
+					</ul>
 				</FeatureCard>
 
 				<FeatureCard
