@@ -12,8 +12,10 @@ const appConfig = useAppConfig();
 // @feature/auth - start
 const { isAuthed } = useAuth();
 const currentLayout = computed(() => (isAuthed.value ? "authed" : "unauthed"));
-// const currentLayout = "default";
 // @feature/auth - end
+
+// Uncomment this if !using auth
+// const currentLayout = "default";
 
 appConfig.ui.colors.primary = settingsStore.primaryColor;
 
