@@ -28,6 +28,7 @@ const links = computed(() => [
 		icon: "i-heroicons-cog-6-tooth-solid",
 		onSelect: onItemSelect,
 	},
+	// @feature/networking - start
 	{
 		id: 3,
 		to: "/articles",
@@ -35,6 +36,7 @@ const links = computed(() => [
 		icon: "i-heroicons-book-open-solid",
 		onSelect: onItemSelect,
 	},
+	// @feature/networking - end
 ]);
 </script>
 

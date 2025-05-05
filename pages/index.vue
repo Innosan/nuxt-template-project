@@ -5,7 +5,9 @@ definePageMeta({
 	title: "Home",
 	heading: "Home",
 	description: "Home page",
+	// @feature/auth - start
 	layout: "authed",
+	// @feature/auth - end
 });
 </script>
 
