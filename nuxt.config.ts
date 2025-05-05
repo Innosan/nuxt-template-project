@@ -8,12 +8,10 @@ export default defineNuxtConfig({
 		"@formkit/auto-animate/nuxt",
 
 		"@nuxtjs/i18n",
-
 		// @feature/auth - start
 		"@nuxtjs/supabase",
 		// @feature/auth - end
 	],
-
 	// @feature/networking - start
 	runtimeConfig: {
 		public: {
@@ -21,7 +19,6 @@ export default defineNuxtConfig({
 		},
 	},
 	// @feature/networking - end
-
 	components: [
 		{
 			path: "~/components",
@@ -46,6 +43,14 @@ export default defineNuxtConfig({
 		},
 	},
 
+	fonts: {
+		defaults: {
+			weights: [400, 700],
+			styles: ["normal"],
+			subsets: ["cyrillic-ext", "cyrillic", "latin-ext", "latin"],
+		},
+	},
+
 	i18n: {
 		strategy: "no_prefix",
 		defaultLocale: "en",
@@ -62,12 +67,10 @@ export default defineNuxtConfig({
 			},
 		],
 	},
-
 	// @feature/auth - start
 	supabase: {
 		// Options
 	},
 	// @feature/auth - end
-
 	compatibilityDate: "2025-04-21",
 });
