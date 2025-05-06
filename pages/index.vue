@@ -28,7 +28,9 @@ definePageMeta({
 		</div>
 
 		<div class="m-auto my-16 flex flex-col gap-8">
-			<div class="m-auto mt-16 flex gap-8">
+			<div
+				class="m-auto mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3"
+			>
 				<FeatureCard
 					:title="$t('scaffold-page.features.heading')"
 					icon="i-heroicons-check-circle-solid"
@@ -65,6 +67,7 @@ definePageMeta({
 					:title="$t('scaffold-page.documentation.heading')"
 					icon="i-heroicons-book-open-solid"
 					:description="$t('scaffold-page.documentation.description')"
+					class="col-span-1 md:col-span-2 md:w-full xl:col-span-1"
 				>
 					<ul class="list-disc pl-6">
 						<li>

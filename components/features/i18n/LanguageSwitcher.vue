@@ -7,7 +7,7 @@ const { locale, setLocale, setLocaleCookie } = useI18n();
 <template>
 	<UDropdownMenu :items="languages">
 		<UButton
-			class="w-full cursor-pointer md:w-fit"
+			class="cursor-pointer md:w-fit"
 			icon="i-heroicons-language-20-solid"
 			variant="solid"
 			color="primary"

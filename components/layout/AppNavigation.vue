@@ -37,6 +37,15 @@ const links = computed(() => [
 		onSelect: onItemSelect,
 	},
 	// @feature/networking - end
+	// @feature/content - start
+	{
+		id: 4,
+		to: "/guides",
+		label: t("navigation.guides"),
+		icon: "i-heroicons-academic-cap-solid",
+		onSelect: onItemSelect,
+	},
+	// @feature/content - end
 ]);
 </script>
 

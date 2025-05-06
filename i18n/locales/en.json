@@ -6,7 +6,8 @@
 		"home": "Home",
 		"contact": "Contact",
 		"settings": "Settings",
-		"articles": "Articles"
+		"articles": "Articles",
+		"guides": "Guides"
 	},
 	"buttons": {
 		"change-language": "Change language",

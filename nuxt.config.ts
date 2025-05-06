@@ -11,6 +11,9 @@ export default defineNuxtConfig({
 		// @feature/auth - start
 		"@nuxtjs/supabase",
 		// @feature/auth - end
+		// @feature/content - start
+		"@nuxt/content",
+		// @feature/content - end
 	],
 	// @feature/networking - start
 	runtimeConfig: {

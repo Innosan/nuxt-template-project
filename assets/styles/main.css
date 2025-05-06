@@ -11,4 +11,5 @@
 /* Fonts */
 @theme {
 	--font-sans: 'Manrope', sans-serif;
+	--font-mono: 'IBM Plex Mono', monospace;
 }
