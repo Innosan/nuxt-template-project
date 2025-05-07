@@ -2,6 +2,11 @@
 import { languages } from "~/i18n/languages";
 
 const { locale, setLocale, setLocaleCookie } = useI18n();
+
+const switchLocale = (newLocale: string) => {
+	setLocale(newLocale); // Use setLocale to manage the state change
+	setLocaleCookie(newLocale); // Update the cookie
+};
 </script>
 
 <template>
@@ -20,14 +25,7 @@ const { locale, setLocale, setLocaleCookie } = useI18n();
 				:label="item.label"
 				variant="link"
 				:color="item.value === locale ? 'primary' : 'neutral'"
-				@click="
-					() => {
-						locale = item.value as 'ru' | 'en' | 'ko';
-
-						setLocale(locale);
-						setLocaleCookie(locale);
-					}
-				"
+				@click="switchLocale(item.value)"
 			/>
 		</template>
 	</UDropdownMenu>

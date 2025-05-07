@@ -6,7 +6,8 @@
 		"home": "Главная",
 		"contact": "Контакты",
 		"settings": "Настройки",
-		"articles": "Статьи"
+		"articles": "Статьи",
+		"guides": "Руководства"
 	},
 	"buttons": {
 		"change-language": "Сменить язык",
