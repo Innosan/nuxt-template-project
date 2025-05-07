@@ -1,66 +1,8 @@
 <script setup lang="ts">
-import { z } from "zod";
+import { useAuthForm } from "~/composables/authForm";
 
-const { t } = useI18n();
-const { signIn, signUp } = useAuth();
-
-const schema = z.object({
-	email: z
-		.string({ message: t("auth.validation.required") })
-		.email(t("auth.validation.email")),
-	password: z
-		.string({ message: t("auth.validation.required") })
-		.min(6, t("auth.validation.password")),
-});
-
-type Schema = z.output<typeof schema>;
-
-const state = reactive<Partial<Schema>>({
-	email: "",
-	password: "",
-});
-
-const toast = useToast();
-
-const tabs = computed(() => [
-	{
-		label: t("auth.buttons.login"),
-		description: t("auth.login.description"),
-		icon: "i-heroicons-user-20-solid",
-		slot: "sign-in",
-	},
-	{
-		label: t("auth.buttons.register"),
-		description: t("auth.register.description"),
-		icon: "i-heroicons-user-plus-solid",
-		slot: "create-new",
-	},
-]);
-
-const currentTab = ref("0");
-
-const buttonState = computed(() => {
-	return {
-		variant: currentTab.value === "0" ? "subtle" : "solid",
-		label:
-			currentTab.value === "0"
-				? t("auth.buttons.login")
-				: t("auth.buttons.register"),
-		icon:
-			currentTab.value === "0"
-				? "i-heroicons-user-20-solid"
-				: "i-heroicons-user-plus-solid",
-		disabled: state.email === "" || state.password === "",
-	};
-});
-
-const onSubmit = async () => {
-	if (currentTab.value === "0") {
-		await signIn(state.email, state.password);
-	} else {
-		await signUp(state.email, state.password);
-	}
-};
+const { schema, state, tabs, currentTab, buttonState, onSubmit } =
+	useAuthForm();
 </script>
 
 <template>
@@ -124,14 +66,6 @@ const onSubmit = async () => {
 			</template>
 		</UTabs>
 
-		<UButton
-			:disabled="buttonState.disabled"
-			loading-auto
-			type="submit"
-			:label="buttonState.label"
-			:icon="buttonState.icon"
-			:variant="buttonState.variant"
-			block
-		/>
+		<UButton v-bind="buttonState" loading-auto type="submit" block />
 	</UForm>
 </template>

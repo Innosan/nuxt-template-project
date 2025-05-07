@@ -12,7 +12,7 @@ defineProps({
 		default: "",
 	},
 	size: {
-		type: Object as PropType,
+		type: Object as PropType<SectionSize>,
 		default: () => SectionSizes.md,
 	},
 	isDivided: {

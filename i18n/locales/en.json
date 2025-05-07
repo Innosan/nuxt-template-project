@@ -6,7 +6,7 @@
 		"home": "Home",
 		"contact": "Contact",
 		"settings": "Settings",
-		"articles": "Articles",
+		"recommendations": "Recommendations",
 		"guides": "Guides"
 	},
 	"buttons": {
@@ -82,11 +82,11 @@
 			"description": "Visit the official documentation for tools that are essential for building your app, including Nuxt, Nuxt UI, and Supabase."
 		}
 	},
-	"articles": {
-		"heading": "Articles",
-		"description": "Read the latest articles",
-		"read": "Read the article",
-		"explore": "Explore the articles",
+	"recommendations": {
+		"heading": "Recommendations",
+		"description": "Read the latest recommendations",
+		"read": "Read the recommendations",
+		"explore": "Explore the recommendations",
 		"contribute": "Contribute to the project"
 	}
 }

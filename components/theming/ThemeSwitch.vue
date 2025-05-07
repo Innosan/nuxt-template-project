@@ -1,3 +1,14 @@
+<script setup lang="ts">
+const colorMode = useColorMode();
+
+const isDark = computed({
+	get: () => colorMode.value === "dark",
+	set: (value) => {
+		colorMode.preference = value ? "dark" : "light";
+	},
+});
+</script>
+
 <template>
 	<USwitch
 		v-model="isDark"
@@ -9,14 +20,3 @@
 		aria-label="Theme"
 	/>
 </template>
-
-<script setup>
-const colorMode = useColorMode();
-
-const isDark = computed({
-	get: () => colorMode.value === 'dark',
-	set: (value) => {
-		colorMode.preference = value ? 'dark' : 'light';
-	},
-});
-</script>

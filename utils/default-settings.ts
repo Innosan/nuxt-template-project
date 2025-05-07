@@ -1,5 +1,5 @@
 export const defaultSettings = {
-	appName: "Nuxt Template",
+	appName: "Robust Nuxt Template",
 	appIcon: "i-lineicons-nuxt",
 
 	primaryColor: "emerald",

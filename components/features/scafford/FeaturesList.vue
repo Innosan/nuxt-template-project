@@ -37,16 +37,22 @@ const featuresList = computed(() => [
 
 <template>
 	<div
-		class="m-auto mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3"
+		class="m-0 md:m-auto mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3"
 	>
-		<template v-for="feature in featuresList" :key="feature.title">
+		<template v-for="(feature, fIndex) in featuresList" :key="fIndex">
 			<FeatureCard
 				:title="feature.title"
 				:icon="feature.icon"
 				:description="feature.description"
+				:class="[
+					fIndex === featuresList.length - 1 &&
+					featuresList.length % 2 === 1
+						? 'col-span-1 md:col-span-2 xl:col-span-1'
+						: '',
+				]"
 			>
 				<ul class="list-disc pl-6">
-					<li v-for="(item, index) in feature.list" :key="index">
+					<li v-for="(item, iIndex) in feature.list" :key="iIndex">
 						{{ item }}
 					</li>
 				</ul>

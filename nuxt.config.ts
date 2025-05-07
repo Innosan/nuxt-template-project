@@ -17,9 +17,7 @@ export default defineNuxtConfig({
 	],
 	// @feature/networking - start
 	runtimeConfig: {
-		public: {
-			apiBase: process.env.NUXT_PUBLIC_API_BASE || "/api",
-		},
+		apiBase: process.env.NUXT_API_BASE || "/api",
 	},
 	// @feature/networking - end
 	components: [
