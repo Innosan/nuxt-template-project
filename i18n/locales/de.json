@@ -113,6 +113,8 @@
 		"explore": "Anleitungen erkunden",
 		"contribute": "Beteiligen Sie sich am Projekt",
 		"total": "Gesamt",
-		"navigate": "Anleitung"
+		"navigate": "Anleitung",
+		"last-updated": "Zuletzt aktualisiert",
+		"locale": "Gebietsschema"
 	}
 }

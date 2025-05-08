@@ -113,6 +113,8 @@
 		"explore": "おすすめを探る",
 		"contribute": "開発に参加",
 		"total": "合計",
-		"navigate": "導く"
+		"navigate": "導く",
+		"last-updated": "最後に更新されました",
+		"locale": "ロケール"
 	}
 }
