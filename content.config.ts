@@ -8,6 +8,7 @@ export default defineContentConfig({
 			schema: z.object({
 				date: z.string(),
 				locale: z.string().default("en"),
+				icon: z.string(),
 			}),
 		}),
 	},

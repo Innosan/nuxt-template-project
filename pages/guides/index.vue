@@ -30,11 +30,30 @@ useSeoMeta({
 			variant="subtle"
 		/>
 
-		<ul>
-			<li v-for="guide in guides" :key="guide.id">
-				<NuxtLink :to="guide.path">{{ guide.title }}</NuxtLink>
-				<p class="text-sm text-gray-500">{{ guide.description }}</p>
-			</li>
-		</ul>
+		<div class="flex gap-2 items-center">
+			<ActionCard
+				:title="$t('guides.total')"
+				:description="guides.length.toString()"
+			/>
+
+			<ActionCard
+				:title="$t('guides.last-updated')"
+				:description="guides[0]?.date || 'N/A'"
+			/>
+
+			<ActionCard :title="$t('guides.locale')" :description="locale" />
+		</div>
+
+		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+			<GuideCard
+				v-for="guide in guides"
+				:key="guide.id"
+				:title="guide.title"
+				:description="guide.description"
+				:icon="guide.icon"
+				:date="guide.date"
+				:path="guide.path"
+			/>
+		</div>
 	</div>
 </template>

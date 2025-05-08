@@ -1,116 +1,118 @@
 {
-  "headings": {
-    "main": "Willkommen auf der Startseite"
-  },
-  "navigation": {
-    "home": "Startseite",
-    "contact": "Kontakt",
-    "settings": "Einstellungen",
-    "recommendations": "Empfehlungen",
-    "guides": "Anleitungen"
-  },
-  "buttons": {
-    "change-language": "Sprache ändern",
-    "load-more": "Mehr laden",
-    "refresh": "Aktualisieren",
-    "submit": "Einreichen"
-  },
-  "settings": {
-    "alert": {
-      "label": "Einstellungsseite",
-      "description": "Diese Seite zeigt, wie man die Einstellungen verwaltet."
-    },
-    "theme": {
-      "label": "Thema",
-      "description": "Wählen Sie das Thema für die Anwendung"
-    },
-    "color": {
-      "label": "Farbe",
-      "description": "Wählen Sie die Farbe für die Anwendung"
-    },
-    "language": {
-      "label": "Sprache",
-      "description": "Wählen Sie die Sprache für die Anwendung"
-    },
-    "title": "Einstellungen"
-  },
-  "auth": {
-    "alert": {
-      "label": "Authentifizierungsseite",
-      "description": "Diese Seite zeigt, wie man Supabase für die Authentifizierung verwendet."
-    },
-    "labels": {
-      "email": "E-Mail",
-      "password": "Passwort",
-      "confirm-password": "Passwort bestätigen"
-    },
-    "buttons": {
-      "login": "Anmelden",
-      "register": "Registrieren",
-      "submit": "Einreichen",
-      "sign-out": "Abmelden"
-    },
-    "login": {
-      "description": "Bitte geben Sie Ihre Anmeldeinformationen ein"
-    },
-    "register": {
-      "description": "Ein neues Konto erstellen"
-    },
-    "validation": {
-      "required": "Dieses Feld ist erforderlich",
-      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-      "password": "Das Passwort muss mindestens 6 Zeichen lang sein"
-    }
-  },
-  "scaffold-page": {
-    "heading": "{appName} — das ist ein einfaches, aber leistungsstarkes Nuxt-Template",
-    "description": "Aus der Box Unterstützung für Supabase, Internationalisierung (i18n) und vorgefertigte Basis-Komponenten.",
-    "features": {
-      "heading": "Was ist drin?",
-      "description": "Alles, was Sie für den schnellen Start benötigen",
-      "supabase": "Integration mit Supabase",
-      "base-components": "Vorgefertigte Basis-Komponenten",
-      "i18n": "Unterstützung mehrerer Sprachen"
-    },
-    "usage": {
-      "heading": "Wie anfangen?",
-      "description": "Befolgen Sie die Schritte, um das Template zu installieren und zu verwenden",
-      "install": "Installieren Sie das Template",
-      "run": "Starten Sie den Entwicklungsserver",
-      "start": "Beginnen Sie mit dem Erstellen Ihrer Anwendung"
-    },
-    "documentation": {
-      "heading": "Dokumentation",
-      "description": "Hilfreiche Materialien zur Arbeit mit der Vorlage",
-      "read": "Lesen Sie die Dokumentation",
-      "explore": "Erforschen Sie den Quellcode",
-      "contribute": "Beteiligen Sie sich an der Entwicklung"
-    },
-    "essential-documentation": {
-      "heading": "Wichtige Dokumentation",
-      "description": "Studieren Sie die offizielle Dokumentation von Tools wie Nuxt, Nuxt UI und Supabase, um das Template optimal zu nutzen."
-    }
-  },
-  "recommendations": {
-    "alert": {
-      "label": "Empfehlungen Seite",
-      "description": "Diese Seite demonstriert, wie man API mit Nitro Server verwendet."
-    },
-    "heading": "Empfehlungen",
-    "description": "Lesen Sie die neuesten Empfehlungen.",
-    "read": "Lesen Sie die Empfehlungen",
-    "explore": "Erforschen Sie die Empfehlungen",
-    "contribute": "Beteiligen Sie sich an der Entwicklung"
-  },
-  "guides": {
-    "alert": {
-      "label": "Anleitungen Seite",
-      "description": "Diese Seite demonstriert, wie man Nuxt Content zum Anzeigen von MD-Inhalten verwendet."
-    },
-    "heading": "Anleitungen",
-    "description": "Lesen Sie die neuesten Anleitungen",
-    "read": "Anleitungen lesen",
-    "explore": "Anleitungen erkunden",
-    "contribute": "Beteiligen Sie sich am Projekt"
-  }
+	"headings": {
+		"main": "Willkommen auf der Startseite"
+	},
+	"navigation": {
+		"home": "Startseite",
+		"contact": "Kontakt",
+		"settings": "Einstellungen",
+		"recommendations": "Empfehlungen",
+		"guides": "Anleitungen"
+	},
+	"buttons": {
+		"change-language": "Sprache ändern",
+		"load-more": "Mehr laden",
+		"refresh": "Aktualisieren",
+		"submit": "Einreichen"
+	},
+	"settings": {
+		"alert": {
+			"label": "Einstellungsseite",
+			"description": "Diese Seite zeigt, wie man die Einstellungen verwaltet."
+		},
+		"theme": {
+			"label": "Thema",
+			"description": "Wählen Sie das Thema für die Anwendung"
+		},
+		"color": {
+			"label": "Farbe",
+			"description": "Wählen Sie die Farbe für die Anwendung"
+		},
+		"language": {
+			"label": "Sprache",
+			"description": "Wählen Sie die Sprache für die Anwendung"
+		},
+		"title": "Einstellungen"
+	},
+	"auth": {
+		"alert": {
+			"label": "Authentifizierungsseite",
+			"description": "Diese Seite zeigt, wie man Supabase für die Authentifizierung verwendet."
+		},
+		"labels": {
+			"email": "E-Mail",
+			"password": "Passwort",
+			"confirm-password": "Passwort bestätigen"
+		},
+		"buttons": {
+			"login": "Anmelden",
+			"register": "Registrieren",
+			"submit": "Einreichen",
+			"sign-out": "Abmelden"
+		},
+		"login": {
+			"description": "Bitte geben Sie Ihre Anmeldeinformationen ein"
+		},
+		"register": {
+			"description": "Ein neues Konto erstellen"
+		},
+		"validation": {
+			"required": "Dieses Feld ist erforderlich",
+			"email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+			"password": "Das Passwort muss mindestens 6 Zeichen lang sein"
+		}
+	},
+	"scaffold-page": {
+		"heading": "{appName} — das ist ein einfaches, aber leistungsstarkes Nuxt-Template",
+		"description": "Aus der Box Unterstützung für Supabase, Internationalisierung (i18n) und vorgefertigte Basis-Komponenten.",
+		"features": {
+			"heading": "Was ist drin?",
+			"description": "Alles, was Sie für den schnellen Start benötigen",
+			"supabase": "Integration mit Supabase",
+			"base-components": "Vorgefertigte Basis-Komponenten",
+			"i18n": "Unterstützung mehrerer Sprachen"
+		},
+		"usage": {
+			"heading": "Wie anfangen?",
+			"description": "Befolgen Sie die Schritte, um das Template zu installieren und zu verwenden",
+			"install": "Installieren Sie das Template",
+			"run": "Starten Sie den Entwicklungsserver",
+			"start": "Beginnen Sie mit dem Erstellen Ihrer Anwendung"
+		},
+		"documentation": {
+			"heading": "Dokumentation",
+			"description": "Hilfreiche Materialien zur Arbeit mit der Vorlage",
+			"read": "Lesen Sie die Dokumentation",
+			"explore": "Erforschen Sie den Quellcode",
+			"contribute": "Beteiligen Sie sich an der Entwicklung"
+		},
+		"essential-documentation": {
+			"heading": "Wichtige Dokumentation",
+			"description": "Studieren Sie die offizielle Dokumentation von Tools wie Nuxt, Nuxt UI und Supabase, um das Template optimal zu nutzen."
+		}
+	},
+	"recommendations": {
+		"alert": {
+			"label": "Empfehlungen Seite",
+			"description": "Diese Seite demonstriert, wie man API mit Nitro Server verwendet."
+		},
+		"heading": "Empfehlungen",
+		"description": "Lesen Sie die neuesten Empfehlungen.",
+		"read": "Lesen Sie die Empfehlungen",
+		"explore": "Erforschen Sie die Empfehlungen",
+		"contribute": "Beteiligen Sie sich an der Entwicklung"
+	},
+	"guides": {
+		"alert": {
+			"label": "Anleitungen Seite",
+			"description": "Diese Seite demonstriert, wie man Nuxt Content zum Anzeigen von MD-Inhalten verwendet."
+		},
+		"heading": "Anleitungen",
+		"description": "Lesen Sie die neuesten Anleitungen",
+		"read": "Anleitungen lesen",
+		"explore": "Anleitungen erkunden",
+		"contribute": "Beteiligen Sie sich am Projekt",
+		"total": "Gesamt",
+		"navigate": "Anleitung"
+	}
 }

@@ -1,6 +1,7 @@
 ---
 date: 2025-05-07
 locale: ru
+icon: i-heroicons-bolt-solid
 ---
 
 # Guide 2: Продвинутые техники
@@ -11,7 +12,7 @@ locale: ru
 
 ```typescript
 const greet = (name: string): void => {
-  console.log(`Hello, ${name}!`);
+	console.log(`Hello, ${name}!`);
 };
 
 greet("Guide 2");
