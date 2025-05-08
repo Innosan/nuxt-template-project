@@ -18,10 +18,6 @@ const appConfig = useAppConfig();
 
 		<div class="flex items-center gap-3">
 			<AppNavigation :title="appConfig.appName as string" />
-
-			<!-- @feature/auth - start -->
-			<SignOutButton />
-			<!-- @feature/auth - end -->
 		</div>
 	</header>
 </template>

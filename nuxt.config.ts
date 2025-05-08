@@ -8,9 +8,7 @@ export default defineNuxtConfig({
 		"@formkit/auto-animate/nuxt",
 
 		"@nuxtjs/i18n",
-		// @feature/auth - start
-		"@nuxtjs/supabase",
-		// @feature/auth - end
+
 		// @feature/content - start
 		"@nuxt/content",
 		// @feature/content - end
@@ -78,10 +76,5 @@ export default defineNuxtConfig({
 			}
 		],
 	},
-	// @feature/auth - start
-	supabase: {
-		// Options
-	},
-	// @feature/auth - end
-	compatibilityDate: "2025-04-21",
+	compatibilityDate: "2025-05-08",
 });
