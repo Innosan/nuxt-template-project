@@ -2,12 +2,12 @@
 	"name": "nuxt-app",
 	"private": true,
 	"type": "module",
-	"packageManager": "pnpm@9.15.9",
 	"scripts": {
 		"build": "nuxt build",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
+		"preinstall": "pnpm approve-builds better-sqlite3",
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
