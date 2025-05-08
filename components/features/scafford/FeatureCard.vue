@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-	<UCard class="w-80">
+	<UCard>
 		<template #header>
 			<div class="text-primary-500 flex items-center gap-2">
 				<UIcon :name="icon" class="h-8 w-8" />

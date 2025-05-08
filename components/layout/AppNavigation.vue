@@ -31,9 +31,9 @@ const links = computed(() => [
 	// @feature/networking - start
 	{
 		id: 3,
-		to: "/articles",
-		label: t("navigation.articles"),
-		icon: "i-heroicons-book-open-solid",
+		to: "/recommendations",
+		label: t("navigation.recommendations"),
+		icon: "i-heroicons-sparkles-solid",
 		onSelect: onItemSelect,
 	},
 	// @feature/networking - end

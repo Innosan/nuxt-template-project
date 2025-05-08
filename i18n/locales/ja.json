@@ -1,0 +1,120 @@
+{
+	"headings": {
+		"main": "メインページへようこそ!"
+	},
+	"navigation": {
+		"home": "ホーム",
+		"contact": "連絡先",
+		"settings": "設定",
+		"recommendations": "おすすめ",
+		"guides": "ガイド"
+	},
+	"buttons": {
+		"change-language": "言語を変更",
+		"load-more": "もっと読み込む",
+		"refresh": "ページを更新",
+		"submit": "送信する"
+	},
+	"settings": {
+		"alert": {
+			"label": "設定ページ",
+			"description": "このページは、Piniaを使用してアプリケーションの状態を管理する方法を示しています。"
+		},
+		"theme": {
+			"label": "テーマ",
+			"description": "アプリケーションのスタイルを選択してください"
+		},
+		"color": {
+			"label": "カラーパレット",
+			"description": "アプリケーションの色のスキームを設定します"
+		},
+		"language": {
+			"label": "インターフェースの言語",
+			"description": "あなたが快適に使える言語を選択してください"
+		},
+		"title": "設定"
+	},
+	"auth": {
+		"alert": {
+			"label": "インターフェースの言語",
+			"description": "あなたが快適に使える言語を選択してください"
+		},
+		"labels": {
+			"email": "メールアドレス",
+			"password": "パスワード",
+			"confirm-password": "パスワードを確認してください"
+		},
+		"buttons": {
+			"login": "ログイン",
+			"register": "アカウントを作成する",
+			"submit": "データを送信",
+			"sign-out": "アカウントからサインアウト"
+		},
+		"login": {
+			"description": "ログインするための情報を入力してください"
+		},
+		"register": {
+			"description": "アカウントを作成するのは簡単です"
+		},
+		"validation": {
+			"required": "このフィールドは必須です",
+			"email": "正しいメールアドレスを入力してください",
+			"password": "パスワードは6文字以上である必要があります"
+		}
+	},
+	"scaffold-page": {
+		"heading": "{appName} — これは、プロジェクトを迅速に開始するための強力なNuxtテンプレートです。",
+		"description": "Supabase、国際化（i18n）、および基本コンポーネントのサポートが付属しています。",
+		"features": {
+			"heading": "中に何がありますか？",
+			"description": "迅速なスタートに必要なすべて",
+			"supabase": "Supabaseとの統合",
+			"base-components": "基本コンポーネントの準備が整っています",
+			"i18n": "複数言語のサポート"
+		},
+		"usage": {
+			"heading": "始め方は？",
+			"description": "作業を開始するための簡単な手順",
+			"install": "テンプレートをインストール",
+			"run": "開発サーバーを起動",
+			"start": "アプリケーションの作成を開始"
+		},
+		"documentation": {
+			"heading": "ドキュメンテーション",
+			"description": "テンプレートを使用するための便利な資料",
+			"read": "ドキュメンテーションを確認",
+			"explore": "ソースコードを探る",
+			"contribute": "開発に参加"
+		},
+		"essential-documentation": {
+			"heading": "便利なリンク",
+			"description": "Nuxt、Nuxt UI、Supabaseなどのツールの公式ドキュメントを確認して、テンプレートを最大限に活用してください。"
+		}
+	},
+	"recommendations": {
+		"alert": {
+			"label": "便利なリンク",
+			"description": "Nuxt、Nuxt UI、Supabaseなどのツールの公式ドキュメントを確認して、テンプレートを最大限に活用してください。"
+		},
+		"heading": "便利なリンク",
+		"description": "Nuxt、Nuxt UI、Supabaseなどのツールの公式ドキュメントを確認して、テンプレートを最大限に活用してください。",
+		"read": "おすすめを読む",
+		"explore": "おすすめを探る",
+		"contribute": "開発に参加"
+	},
+	"guides": {
+		"alert": {
+			"label": "設定ページ",
+			"description": "このページは、APIをNitro Serverで使用する方法を示しています。"
+		},
+		"heading": "ガイド",
+		"description": "最新のガイドをお読みください。",
+		"read": "おすすめを読む",
+		"explore": "おすすめを探る",
+		"contribute": "開発に参加",
+		"total": "合計",
+		"navigate": "導く",
+		"last-updated": "最後に更新されました",
+		"locale": "ロケール"
+	}
+}

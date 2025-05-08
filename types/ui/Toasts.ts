@@ -6,7 +6,7 @@ export enum Toasts {
 
 export interface Toast {
 	title: string;
-	color: string;
+	color: "success" | "error" | "info" | "neutral";
 	icon: string;
 	description?: string;
 }

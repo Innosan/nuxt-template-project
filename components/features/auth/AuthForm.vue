@@ -1,65 +1,12 @@
 <script setup lang="ts">
-import { z } from "zod";
+import { useAuthForm } from "~/composables/authForm";
 
-const { t } = useI18n();
-const { signIn, signUp } = useAuth();
+const { schema, state, tabs, currentTab, buttonState, onSubmit } =
+	useAuthForm();
 
-const schema = z.object({
-	email: z
-		.string({ message: t("auth.validation.required") })
-		.email(t("auth.validation.email")),
-	password: z
-		.string({ message: t("auth.validation.required") })
-		.min(6, t("auth.validation.password")),
-});
-
-type Schema = z.output<typeof schema>;
-
-const state = reactive<Partial<Schema>>({
-	email: "",
-	password: "",
-});
-
-const toast = useToast();
-
-const tabs = computed(() => [
-	{
-		label: t("auth.buttons.login"),
-		description: t("auth.login.description"),
-		icon: "i-heroicons-user-20-solid",
-		slot: "sign-in",
-	},
-	{
-		label: t("auth.buttons.register"),
-		description: t("auth.register.description"),
-		icon: "i-heroicons-user-plus-solid",
-		slot: "create-new",
-	},
-]);
-
-const currentTab = ref("0");
-
-const buttonState = computed(() => {
-	return {
-		variant: currentTab.value === "0" ? "subtle" : "solid",
-		label:
-			currentTab.value === "0"
-				? t("auth.buttons.login")
-				: t("auth.buttons.register"),
-		icon:
-			currentTab.value === "0"
-				? "i-heroicons-user-20-solid"
-				: "i-heroicons-user-plus-solid",
-		disabled: state.email === "" || state.password === "",
-	};
-});
-
-const onSubmit = async () => {
-	if (currentTab.value === "0") {
-		await signIn(state.email, state.password);
-	} else {
-		await signUp(state.email, state.password);
-	}
+const formIcons = {
+	email: "i-heroicons-envelope-solid",
+	password: "i-heroicons-lock-closed-solid",
 };
 </script>
 
@@ -70,6 +17,13 @@ const onSubmit = async () => {
 		class="m-auto w-1/2 space-y-4"
 		@submit="onSubmit"
 	>
+		<UAlert
+			icon="i-heroicons-exclamation-circle-solid"
+			:title="$t('auth.alert.label')"
+			:description="$t('auth.alert.description')"
+			variant="subtle"
+		/>
+
 		<UTabs
 			v-model="currentTab"
 			:items="tabs"
@@ -84,7 +38,11 @@ const onSubmit = async () => {
 					</p>
 
 					<UFormField :label="$t('auth.labels.email')" name="email">
-						<UInput v-model="state.email" class="w-full" />
+						<UInput
+							v-model="state.email"
+							class="w-full"
+							:icon="formIcons.email"
+						/>
 					</UFormField>
 
 					<UFormField
@@ -95,6 +53,7 @@ const onSubmit = async () => {
 							v-model="state.password"
 							type="password"
 							class="w-full"
+							:icon="formIcons.password"
 						/>
 					</UFormField>
 				</UContainer>
@@ -107,7 +66,11 @@ const onSubmit = async () => {
 					</p>
 
 					<UFormField :label="$t('auth.labels.email')" name="email">
-						<UInput v-model="state.email" class="w-full" />
+						<UInput
+							v-model="state.email"
+							class="w-full"
+							:icon="formIcons.email"
+						/>
 					</UFormField>
 
 					<UFormField
@@ -118,20 +81,13 @@ const onSubmit = async () => {
 							v-model="state.password"
 							type="password"
 							class="w-full"
+							:icon="formIcons.password"
 						/>
 					</UFormField>
 				</UContainer>
 			</template>
 		</UTabs>
 
-		<UButton
-			:disabled="buttonState.disabled"
-			loading-auto
-			type="submit"
-			:label="buttonState.label"
-			:icon="buttonState.icon"
-			:variant="buttonState.variant"
-			block
-		/>
+		<UButton v-bind="buttonState" loading-auto type="submit" block />
 	</UForm>
 </template>

@@ -4,7 +4,7 @@ const appConfig = useAppConfig();
 
 <template>
 	<header class="flex items-center justify-between gap-4">
-		<div class="flex items-center gap-3">
+		<div class="items-center gap-3 hidden sm:flex">
 			<UIcon
 				v-if="appConfig.appIcon"
 				:name="appConfig.appIcon"
