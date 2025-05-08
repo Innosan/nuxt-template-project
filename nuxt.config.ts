@@ -66,6 +66,16 @@ export default defineNuxtConfig({
 				file: "ru.json",
 				name: "Русский",
 			},
+			{
+				code: "de",
+				file: "de.json",
+				name: "Deutsch",
+			},
+			{
+				code: "ja",
+				file: "ja.json",
+				name: "日本語",
+			}
 		],
 	},
 	// @feature/auth - start

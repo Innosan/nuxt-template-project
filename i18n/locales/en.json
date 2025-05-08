@@ -1,92 +1,116 @@
 {
-	"headings": {
-		"main": "Welcome to the homepage"
-	},
-	"navigation": {
-		"home": "Home",
-		"contact": "Contact",
-		"settings": "Settings",
-		"recommendations": "Recommendations",
-		"guides": "Guides"
-	},
-	"buttons": {
-		"change-language": "Change language",
-		"load-more": "Load more",
-		"refresh": "Refresh",
-		"submit": "Submit"
-	},
-	"settings": {
-		"theme": {
-			"label": "Theme",
-			"description": "Select the theme for the application"
-		},
-		"color": {
-			"label": "Color",
-			"description": "Select the color for the application"
-		},
-		"language": {
-			"label": "Language",
-			"description": "Select the language for the application"
-		}
-	},
-	"auth": {
-		"labels": {
-			"email": "Email",
-			"password": "Password",
-			"confirm-password": "Confirm Password"
-		},
-		"buttons": {
-			"login": "Login",
-			"register": "Register",
-			"submit": "Submit",
-			"sign-out": "Sign Out"
-		},
-		"login": {
-			"description": "Please enter your credentials to log in"
-		},
-		"register": {
-			"description": "Create a new account"
-		},
-		"validation": {
-			"required": "This field is required",
-			"email": "Please enter a valid email address",
-			"password": "Password must be at least 6 characters long"
-		}
-	},
-	"scaffold-page": {
-		"heading": "{appName} is a simple yet powerful Nuxt template",
-		"description": "The only Nuxt template you will ever need",
-		"features": {
-			"heading": "Features",
-			"description": "All the useful features you need",
-			"supabase": "Supabase integration",
-			"base-components": "Base Components for smooth setup",
-			"i18n": "Internationalization support"
-		},
-		"usage": {
-			"heading": "Usage",
-			"description": "How to use the template",
-			"install": "Install the template",
-			"run": "Run the development server",
-			"start": "Start building your app"
-		},
-		"documentation": {
-			"heading": "Documentation",
-			"description": "How to use the template",
-			"read": "Read the documentation",
-			"explore": "Explore the code",
-			"contribute": "Contribute to the project"
-		},
-		"essential-documentation": {
-			"heading": "Essential Documentation",
-			"description": "Visit the official documentation for tools that are essential for building your app, including Nuxt, Nuxt UI, and Supabase."
-		}
-	},
-	"recommendations": {
-		"heading": "Recommendations",
-		"description": "Read the latest recommendations",
-		"read": "Read the recommendations",
-		"explore": "Explore the recommendations",
-		"contribute": "Contribute to the project"
-	}
+  "headings": {
+    "main": "Welcome to the homepage"
+  },
+  "navigation": {
+    "home": "Home",
+    "contact": "Contact",
+    "settings": "Settings",
+    "recommendations": "Recommendations",
+    "guides": "Guides"
+  },
+  "buttons": {
+    "change-language": "Change language",
+    "load-more": "Load more",
+    "refresh": "Refresh",
+    "submit": "Submit"
+  },
+  "settings": {
+    "alert": {
+      "label": "Settings page",
+      "description": "This page demonstrates how to use Pinia to manage application state."
+    },
+    "theme": {
+      "label": "Theme",
+      "description": "Select the theme for the application"
+    },
+    "color": {
+      "label": "Color",
+      "description": "Select the color for the application"
+    },
+    "language": {
+      "label": "Language",
+      "description": "Select the language for the application"
+    },
+    "title": "Settings"
+  },
+  "auth": {
+    "alert": {
+      "label": "Authentication page",
+      "description": "This page demonstrates how to use Supabase for authentication."
+    },
+    "labels": {
+      "email": "Email",
+      "password": "Password",
+      "confirm-password": "Confirm Password"
+    },
+    "buttons": {
+      "login": "Login",
+      "register": "Register",
+      "submit": "Submit",
+      "sign-out": "Sign Out"
+    },
+    "login": {
+      "description": "Please enter your credentials to log in"
+    },
+    "register": {
+      "description": "Create a new account"
+    },
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "password": "Password must be at least 6 characters long"
+    }
+  },
+  "scaffold-page": {
+    "heading": "{appName} is a simple yet powerful Nuxt template",
+    "description": "The only Nuxt template you will ever need",
+    "features": {
+      "heading": "Features",
+      "description": "All the useful features you need",
+      "supabase": "Supabase integration",
+      "base-components": "Base Components for smooth setup",
+      "i18n": "Internationalization support"
+    },
+    "usage": {
+      "heading": "Usage",
+      "description": "How to use the template",
+      "install": "Install the template",
+      "run": "Run the development server",
+      "start": "Start building your app"
+    },
+    "documentation": {
+      "heading": "Documentation",
+      "description": "How to use the template",
+      "read": "Read the documentation",
+      "explore": "Explore the code",
+      "contribute": "Contribute to the project"
+    },
+    "essential-documentation": {
+      "heading": "Essential Documentation",
+      "description": "Visit the official documentation for tools that are essential for building your app, including Nuxt, Nuxt UI, and Supabase."
+    }
+  },
+  "recommendations": {
+    "alert": {
+      "label": "Recommendations page",
+      "description": "This page demonstrates how to call API with Nitro Server."
+    },
+    "heading": "Recommendations",
+    "description": "Read the latest recommendations",
+    "read": "Read the recommendations",
+    "explore": "Explore the recommendations",
+    "contribute": "Contribute to the project"
+  },
+  "guides": {
+    "alert": {
+      "label": "Guides page",
+      "description": "This page demonstrates how to use Nuxt Content for displaying MD content."
+    },
+    "heading": "Guides",
+    "description": "Read the latest guides",
+    "read": "Read the guides",
+    "explore": "Explore the guides",
+    "contribute": "Contribute to the project"
+  }
 }

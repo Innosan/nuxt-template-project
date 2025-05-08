@@ -20,8 +20,16 @@ useSeoMeta({
 </script>
 
 <template>
-	<div>
+	<div class="flex flex-col gap-4">
 		<h1 class="text-2xl font-bold">{{ $t("navigation.guides") }}</h1>
+
+		<UAlert
+			:title="$t('guides.alert.label')"
+			:description="$t('guides.alert.description')"
+			icon="i-heroicons-light-bulb-20-solid"
+			variant="subtle"
+		/>
+
 		<ul>
 			<li v-for="guide in guides" :key="guide.id">
 				<NuxtLink :to="guide.path">{{ guide.title }}</NuxtLink>
