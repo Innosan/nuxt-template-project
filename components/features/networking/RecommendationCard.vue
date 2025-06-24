@@ -17,6 +17,8 @@ defineProps({
 		<h2 class="font-bold truncate">
 			{{ recommendation.content }}
 		</h2>
-		<p class="text-sm opacity-70">{{ recommendation.user.username }}</p>
+		<p class="text-sm opacity-70">
+			{{ recommendation.user.username }} {{ recommendation.mal_id }}
+		</p>
 	</div>
 </template>

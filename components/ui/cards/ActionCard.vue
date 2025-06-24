@@ -28,7 +28,7 @@ defineProps({
 				class="text-sm text-zinc-500"
 				:class="hideDescriptionOnSmall ? 'hidden md:block' : 'block'"
 			>
-				{{ description }} {{ hideDescriptionOnSmall }}
+				{{ description }}
 			</p>
 		</div>
 
