@@ -5,52 +5,54 @@ import {
 
 import { getToast, Toasts } from "~/types/ui/Toasts";
 
-export const useRecommendationsStore = defineStore("nuxt-template-recommendations", () => {
-	const toasts = useToast();
-	const recommendations = ref<Recommendations>(getDefaultRecommendations());
-
-	const page = ref(1);
-	const limit = ref(10);
-	const total = computed(() => recommendations.value.data?.length ?? 0);
-
-	const loading = computed(() => total.value === 0 || total.value === 1);
-
-	const paginatedList = computed(() => {
-		const list = recommendations.value.data ?? []; // Fallback to []
-		const start = (page.value - 1) * limit.value;
-		const end = start + limit.value;
-		return list.slice(start, end);
-	});
-
-	async function fetchRecommendations(type: "anime" | "manga") {
-		const { data, error } = await useFetch<Recommendations>(
-			"/api/recommendations/" + type,
+export const useRecommendationsStore = defineStore(
+	"nuxt-template-recommendations",
+	() => {
+		const toasts = useToast();
+		const recommendations = ref<Recommendations>(
+			getDefaultRecommendations(),
 		);
 
-		if (data.value?.data) {
-			recommendations.value = data.value;
-		} else {
-			toasts.add(
-				getToast(
-					Toasts.ERROR,
-					`Failed to load recommendations. ${error.value?.message}`,
-				),
+		const page = ref(1);
+		const limit = ref(10);
+		const total = computed(() => recommendations.value.data?.length ?? 0);
+
+		const paginatedList = computed(() => {
+			const list = recommendations.value.data ?? []; // Fallback to []
+			const start = (page.value - 1) * limit.value;
+			const end = start + limit.value;
+			return list.slice(start, end);
+		});
+
+		async function fetchRecommendations(type: "anime" | "manga") {
+			const { data, error } = await useFetch<Recommendations>(
+				"/api/recommendations/" + type,
 			);
+
+			if (data.value?.data) {
+				recommendations.value = data.value;
+			} else {
+				toasts.add(
+					getToast(
+						Toasts.ERROR,
+						`Failed to load recommendations. ${error.value?.message}`,
+					),
+				);
+			}
 		}
-	}
 
-	return {
-		// State
-		recommendations,
-		paginatedList,
+		return {
+			// State
+			recommendations,
+			paginatedList,
 
-		// Pagination getters
-		page,
-		limit,
-		total,
-		loading,
+			// Pagination getters
+			page,
+			limit,
+			total,
 
-		// Actions
-		fetchRecommendations,
-	};
-});
+			// Actions
+			fetchRecommendations,
+		};
+	},
+);
