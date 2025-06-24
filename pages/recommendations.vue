@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const recommendationsStore = useRecommendationsStore();
-recommendationsStore.fetchRecommendations("anime");
+const { pending } = await useAsyncData("recommendations", async () => {
+	recommendationsStore.fetchRecommendations("anime");
+	return true;
+});
 </script>
 <template>
 	<div class="flex flex-col gap-4">
@@ -13,7 +16,7 @@ recommendationsStore.fetchRecommendations("anime");
 			variant="subtle"
 		/>
 
-		<div v-if="recommendationsStore.loading" class="grid grid-cols-5 gap-4">
+		<div v-if="pending" class="grid grid-cols-5 gap-4">
 			<USkeleton v-for="i in 10" :key="i" class="w-full h-24" />
 		</div>
 		<div v-else class="grid grid-cols-2 md:grid-cols-5 gap-4">
