@@ -14,6 +14,7 @@
 				<ActionCard
 					:title="$t('settings.theme.label')"
 					:description="$t('settings.theme.description')"
+					hide-description-on-small
 				>
 					<template #action>
 						<ThemeSwitch />
@@ -23,6 +24,7 @@
 				<ActionCard
 					:title="$t('settings.color.label')"
 					:description="$t('settings.color.description')"
+					hide-description-on-small
 				>
 					<template #action>
 						<ColorSwitch />
@@ -32,6 +34,7 @@
 				<ActionCard
 					:title="$t('settings.language.label')"
 					:description="$t('settings.language.description')"
+					hide-description-on-small
 				>
 					<template #action>
 						<LanguageSwitcher />

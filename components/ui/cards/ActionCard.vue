@@ -9,6 +9,10 @@ defineProps({
 		required: false,
 		default: "",
 	},
+	hideDescriptionOnSmall: {
+		type: Boolean,
+		default: false,
+	},
 });
 </script>
 
@@ -19,8 +23,12 @@ defineProps({
 		<div class="flex flex-col">
 			<p class="text-sm font-bold">{{ title }}</p>
 
-			<p v-if="description" class="hidden text-sm text-zinc-500 md:block">
-				{{ description }}
+			<p
+				v-if="description"
+				class="text-sm text-zinc-500"
+				:class="hideDescriptionOnSmall ? 'hidden md:block' : 'block'"
+			>
+				{{ description }} {{ hideDescriptionOnSmall }}
 			</p>
 		</div>
 
