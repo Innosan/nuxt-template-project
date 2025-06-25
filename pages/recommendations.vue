@@ -16,7 +16,9 @@ const { pending } = await useAsyncData("recommendations", async () => {
 			variant="subtle"
 		/>
 
-		<div v-if="pending" class="grid grid-cols-5 gap-4">
+		<SearchToolbar />
+
+		<div v-if="pending" class="grid grid-cols-2 md:grid-cols-5 gap-4">
 			<USkeleton v-for="i in 10" :key="i" class="w-full h-24" />
 		</div>
 		<div v-else class="grid grid-cols-2 md:grid-cols-5 gap-4">
