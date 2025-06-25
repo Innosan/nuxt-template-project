@@ -100,7 +100,11 @@
 		"description": "Read the latest recommendations",
 		"read": "Read the recommendations",
 		"explore": "Explore the recommendations",
-		"contribute": "Contribute to the project"
+		"contribute": "Contribute to the project",
+		"search": {
+			"placeholder": "Search  recommendations",
+			"clear": "Clear input"
+		}
 	},
 	"guides": {
 		"alert": {

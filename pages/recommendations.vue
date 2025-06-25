@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const recommendationsStore = useRecommendationsStore();
+
 const { pending } = await useAsyncData("recommendations", async () => {
 	recommendationsStore.fetchRecommendations("anime");
 	return true;
@@ -16,10 +17,18 @@ const { pending } = await useAsyncData("recommendations", async () => {
 			variant="subtle"
 		/>
 
-		<div v-if="pending" class="grid grid-cols-5 gap-4">
+		<SearchToolbar />
+
+		<div
+			v-if="pending"
+			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
+		>
 			<USkeleton v-for="i in 10" :key="i" class="w-full h-24" />
 		</div>
-		<div v-else class="grid grid-cols-2 md:grid-cols-5 gap-4">
+		<div
+			v-else
+			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
+		>
 			<RecommendationCard
 				v-for="(
 					recommendation, index
@@ -29,10 +38,6 @@ const { pending } = await useAsyncData("recommendations", async () => {
 			/>
 		</div>
 
-		<UPagination
-			v-model:page="recommendationsStore.page"
-			:items-per-page="recommendationsStore.limit"
-			:total="recommendationsStore.total"
-		/>
+		<Pagination />
 	</div>
 </template>
