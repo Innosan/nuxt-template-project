@@ -12,7 +12,11 @@ defineProps({
 
 <template>
 	<UCard
-		:ui="{ header: 'p-2 sm:p-4', body: 'p-2 sm:p-4', footer: 'p-2 sm:p-4' }"
+		:ui="{
+			header: 'p-2 sm:p-4',
+			body: 'p-2 sm:p-4',
+			footer: 'p-2 sm:p-4 items-center justify-center',
+		}"
 	>
 		<template #header>
 			<div class="grid grid-cols-2 gap-4">
@@ -20,7 +24,8 @@ defineProps({
 					v-for="(entry, index) in recommendation.entry"
 					:key="entry.mal_id + index"
 				>
-					<div
+					<NuxtLink
+						:to="entry.url"
 						class="flex flex-col hover:bg-zinc-100 hover:dark:bg-zinc-800 hover:ring-1 hover:cursor-pointer hover:ring-zinc-300 hover:dark:ring-zinc-700 transition-colors rounded-lg p-2"
 					>
 						<img
@@ -28,18 +33,17 @@ defineProps({
 							:alt="entry.title + ' image'"
 							class="h-24 rounded-lg object-cover"
 						/>
-
 						<p class="text-sm opacity-70 font-bold truncate">
 							{{ entry.title }}
 						</p>
-					</div>
+					</NuxtLink>
 				</template>
 			</div>
 		</template>
 
-		<h2 class="font-bold text-sm line-clamp-2">
+		<p class="font-bold text-sm line-clamp-2 min-h-[2.5rem]">
 			{{ recommendation.content }}
-		</h2>
+		</p>
 
 		<template #footer>
 			<UButton
