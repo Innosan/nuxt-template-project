@@ -20,6 +20,7 @@ export default defineNuxtConfig({
 		apiBase: process.env.NUXT_API_BASE || "/api",
 	},
 	// @feature/networking - end
+
 	components: [
 		{
 			path: "~/components",
@@ -66,16 +67,6 @@ export default defineNuxtConfig({
 				file: "ru.json",
 				name: "Русский",
 			},
-			{
-				code: "de",
-				file: "de.json",
-				name: "Deutsch",
-			},
-			{
-				code: "ja",
-				file: "ja.json",
-				name: "日本語",
-			}
 		],
 	},
 	// @feature/auth - start

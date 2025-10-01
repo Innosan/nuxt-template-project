@@ -1,4 +1,4 @@
-import { persistOptions } from "~/utils/persistence";
+import { persistOptions } from "~~/app/utils/persistence";
 
 export const useSettingsStore = defineStore(
 	"nuxt-template-settings",
@@ -18,7 +18,7 @@ export const useSettingsStore = defineStore(
 			// State
 			primaryColor,
 			grayColor,
-			
+
 			// Actions
 			setPrimaryColor,
 			setGrayColor,

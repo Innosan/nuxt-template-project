@@ -1,5 +1,5 @@
-import { Recommendations } from "~/types/server/recommendations";
-import { getToast, Toasts } from "~/types/ui/Toasts";
+import type { Recommendations } from "~~/types/server/recommendations";
+import { Toasts, getToast } from "~~/types/ui/Toasts";
 
 export default defineEventHandler(async (event) => {
 	const type = getRouterParam(event, "type");

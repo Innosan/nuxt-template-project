@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useAuthForm } from "~/composables/authForm";
-
 const { schema, state, tabs, currentTab, buttonState, onSubmit } =
 	useAuthForm();
 

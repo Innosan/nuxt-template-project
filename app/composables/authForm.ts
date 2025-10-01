@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { useAuth } from "~/composables/auth";
 import { useI18n } from "vue-i18n";
-import { Tabs } from "~/types/ui/Tabs";
+import { Tabs } from "~~/types/ui/Tabs";
 
 export const useAuthForm = () => {
 	const { t } = useI18n();

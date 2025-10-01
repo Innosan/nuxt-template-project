@@ -38,6 +38,6 @@ const { pending } = await useAsyncData("recommendations", async () => {
 			/>
 		</div>
 
-		<Pagination />
+		<ListPagination />
 	</div>
 </template>

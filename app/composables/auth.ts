@@ -1,4 +1,4 @@
-import { getToast, Toasts } from "~/types/ui/Toasts";
+import { getToast, Toasts } from "~~/types/ui/Toasts";
 
 export const useAuth = () => {
 	const toast = useToast();

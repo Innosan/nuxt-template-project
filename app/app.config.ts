@@ -31,7 +31,7 @@ export default defineAppConfig({
 		formField: {
 			slots: {
 				label: "text-sm font-bold text-gray-700 dark:text-gray-300",
-			}
-		}
+			},
+		},
 	},
 });

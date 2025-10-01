@@ -1,4 +1,4 @@
-import { searchFields } from "~/utils/search";
+import { searchFields } from "~~/app/utils/search";
 
 export const useRefinementsStore = defineStore(
 	"nuxt-template-refinements",

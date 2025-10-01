@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import * as locales from "@nuxt/ui/locale";
-import { useSettingsStore } from "~/stores/settings";
 
 const { locale } = useI18n();
 const lang = computed(() => locales[locale.value].code);

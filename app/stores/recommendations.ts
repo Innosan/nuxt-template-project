@@ -1,10 +1,10 @@
 import {
 	type Recommendations,
 	getDefaultRecommendations,
-} from "~/types/server/recommendations";
-import { searchFields, getValueByPath } from "~/utils/search";
+} from "~~/types/server/recommendations";
+import { searchFields, getValueByPath } from "~~/app/utils/search";
 
-import { getToast, Toasts } from "~/types/ui/Toasts";
+import { getToast, Toasts } from "~~/types/ui/Toasts";
 
 export const useRecommendationsStore = defineStore(
 	"nuxt-template-recommendations",

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { PropType } from "vue";
-import type { RecommendationsData } from "~/types/server/recommendations";
+import type { RecommendationsData } from "~~/types/server/recommendations";
 
 defineProps({
 	recommendation: {
