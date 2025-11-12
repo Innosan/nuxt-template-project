@@ -20,6 +20,11 @@ export default defineNuxtConfig({
 		apiBase: process.env.NUXT_API_BASE || "/api",
 	},
 	// @feature/networking - end
+
+	// @feature/cross-platform - start
+	ssr: false,
+	// @feature/cross-platform - end
+
 	components: [
 		{
 			path: "~/components",
@@ -66,16 +71,6 @@ export default defineNuxtConfig({
 				file: "ru.json",
 				name: "Русский",
 			},
-			{
-				code: "de",
-				file: "de.json",
-				name: "Deutsch",
-			},
-			{
-				code: "ja",
-				file: "ja.json",
-				name: "日本語",
-			}
 		],
 	},
 	// @feature/auth - start
@@ -83,5 +78,5 @@ export default defineNuxtConfig({
 		// Options
 	},
 	// @feature/auth - end
-	compatibilityDate: "2025-04-21",
+	compatibilityDate: "2025-11-12",
 });

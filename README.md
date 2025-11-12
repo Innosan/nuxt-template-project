@@ -22,6 +22,7 @@ This project is a Nuxt 3 application template with TypeScript support. It includ
 - `layouts/`: Contains layout components (+ auth-based if selected).
 - `middleware/`: Contains middleware functions (+ auth-based if selected).
 - `public/`: Contains public assets like images and fonts.
+-  
 - `server/`: Contains server-side code.
     - `api/`: Contains API routes.
 - `stores/`: Contains Pinia stores.
