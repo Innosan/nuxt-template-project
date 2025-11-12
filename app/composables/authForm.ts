@@ -68,11 +68,16 @@ export const useAuthForm = () => {
 	};
 
 	return {
+		// States
 		schema,
 		state,
-		tabs,
 		currentTab,
+
+		// Getters
+		tabs,
 		buttonState,
+
+		// Actions
 		onSubmit,
 	};
 };

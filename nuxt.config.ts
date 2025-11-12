@@ -74,5 +74,5 @@ export default defineNuxtConfig({
 		// Options
 	},
 	// @feature/auth - end
-	compatibilityDate: "2025-04-21",
+	compatibilityDate: "2025-11-12",
 });

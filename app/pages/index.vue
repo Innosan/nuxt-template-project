@@ -12,24 +12,17 @@ definePageMeta({
 </script>
 
 <template>
-	<PageSection :is-divided="false">
-		<div class="mt-12 flex flex-col items-center gap-6">
-			<h2 class="w-2/3 text-center text-6xl font-black">
-				{{
-					$t("scaffold-page.heading", { appName: appConfig.appName })
-				}}
-			</h2>
+	<div class="flex flex-col gap-2">
+		<UPageHero
+			:title="$t('scaffold-page.heading', { appName: appConfig.appName })"
+			:description="$t('scaffold-page.description')"
+		/>
 
-			<p
-				class="text-primary-500 text-center text-3xl font-bold underline decoration-4 underline-offset-4"
-			>
-				{{ $t("scaffold-page.description") }}
-			</p>
-		</div>
-
-		<div class="m-auto my-16 flex flex-col gap-8">
+		<UPageSection>
 			<FeaturesList />
+		</UPageSection>
 
+		<UPageSection>
 			<UAlert
 				:title="$t('scaffold-page.essential-documentation.heading')"
 				color="neutral"
@@ -62,6 +55,6 @@ definePageMeta({
 					},
 				]"
 			/>
-		</div>
-	</PageSection>
+		</UPageSection>
+	</div>
 </template>

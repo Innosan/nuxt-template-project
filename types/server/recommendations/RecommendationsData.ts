@@ -1,5 +1,5 @@
 import { type Entry, getDefaultEntry } from "./index";
-import type { User } from "~/types/server/User";
+import type { User } from "~~/types/server/User";
 
 export type RecommendationsData = {
 	mal_id: string;
