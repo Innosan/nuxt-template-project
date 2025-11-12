@@ -55,7 +55,12 @@ const links = computed(() => [
 	</div>
 
 	<div class="block md:hidden">
-		<USlideover v-model:open="open" :title="title" description="Navigation">
+		<USlideover
+			v-model:open="open"
+			:title="title"
+			description="Navigation"
+			side="left"
+		>
 			<UButton
 				icon="i-heroicons-bars-3"
 				color="primary"

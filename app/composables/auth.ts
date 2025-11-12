@@ -3,7 +3,7 @@ import { getToast, Toasts } from "~~/types/ui/Toasts";
 export const useAuth = () => {
 	const toast = useToast();
 	const client = useSupabaseClient();
-	const user = useSupabaseUser();
+	const user = useSupabaseSession();
 
 	const isAuthed = computed(() => user.value !== null);
 
@@ -22,7 +22,7 @@ export const useAuth = () => {
 
 			if (signInError) throw signInError;
 
-			await navigateToHome();
+			return navigateToHome();
 		} catch (err) {
 			if (err instanceof Error) {
 				error.value = err.message;
@@ -50,7 +50,7 @@ export const useAuth = () => {
 
 			if (signUpError) throw signUpError;
 
-			await navigateToHome();
+			return navigateToHome();
 		} catch (err) {
 			if (err instanceof Error) {
 				error.value = err.message;
@@ -74,7 +74,7 @@ export const useAuth = () => {
 			const { error: signOutError } = await client.auth.signOut();
 			if (signOutError) throw signOutError;
 
-			await navigateToLogin();
+			return navigateToLogin();
 		} catch (err) {
 			if (err instanceof Error) {
 				error.value = err.message;
@@ -91,18 +91,18 @@ export const useAuth = () => {
 		}
 	};
 
-	const navigateToHome = async () => {
+	const navigateToHome = () => {
 		if (user.value) {
 			toast.add(getToast(Toasts.SUCCESS, "Welcome back!"));
 
-			await navigateTo("/");
+			return navigateTo("/");
 		}
 	};
 
-	const navigateToLogin = async () => {
+	const navigateToLogin = () => {
 		toast.add(getToast(Toasts.INFO, "Redirecting to login page..."));
 
-		await navigateTo("/login");
+		return navigateTo("/login");
 	};
 
 	return {

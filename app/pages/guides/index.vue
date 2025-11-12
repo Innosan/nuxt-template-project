@@ -1,4 +1,13 @@
 <script setup lang="ts">
+definePageMeta({
+	middleware: ["auth"],
+});
+
+useSeoMeta({
+	title: "Guides",
+	description: "A list of guides",
+});
+
 const { locale } = useI18n();
 
 const _guides = await queryCollection("guides")
@@ -11,11 +20,6 @@ watchEffect(async () => {
 	guides.value = await queryCollection("guides")
 		.where("locale", "=", locale.value)
 		.all();
-});
-
-useSeoMeta({
-	title: "Guides",
-	description: "A list of guides",
 });
 </script>
 

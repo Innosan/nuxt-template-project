@@ -21,6 +21,10 @@ export default defineNuxtConfig({
 	},
 	// @feature/networking - end
 
+	// @feature/cross-platform - start
+	ssr: false,
+	// @feature/cross-platform - end
+
 	components: [
 		{
 			path: "~/components",

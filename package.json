@@ -29,6 +29,9 @@
 		"vue-router": "^4.5.1"
 	},
 	"dependencies": {
+		"@capacitor/android": "^7.4.4",
+		"@capacitor/cli": "^7.4.4",
+		"@capacitor/core": "^7.4.4",
 		"@formkit/auto-animate": "^0.9.0",
 		"@intlify/message-compiler": "^11.1.12",
 		"@nuxt/content": "^3.7.1",

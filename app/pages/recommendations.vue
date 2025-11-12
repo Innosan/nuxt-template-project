@@ -5,6 +5,10 @@ const { pending } = await useAsyncData("recommendations", async () => {
 	recommendationsStore.fetchRecommendations("anime");
 	return true;
 });
+
+definePageMeta({
+	middleware: ["auth"],
+});
 </script>
 <template>
 	<div class="flex flex-col gap-4">

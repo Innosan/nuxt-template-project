@@ -12,7 +12,7 @@ const formIcons = {
 	<UForm
 		:schema="schema"
 		:state="state"
-		class="m-auto w-1/2 space-y-4"
+		class="m-auto w-full md:w-1/2 space-y-4"
 		@submit="onSubmit"
 	>
 		<UAlert

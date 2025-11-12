@@ -8,6 +8,7 @@ definePageMeta({
 	// @feature/auth - start
 	layout: "authed",
 	// @feature/auth - end
+	middleware: ["auth"],
 });
 </script>
 
