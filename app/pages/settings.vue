@@ -1,4 +1,23 @@
 <script setup lang="ts">
+const route = useRoute();
+
+useSeoMeta({
+	title: "Settings - Robust Nuxt Template",
+	description:
+		"Customize your Robust Nuxt Template experience. Configure theme, color scheme, language preferences, and application settings for optimal development workflow.",
+	keywords:
+		"settings, theme customization, color scheme, language settings, application preferences, user configuration",
+	ogTitle: "Settings - Robust Nuxt Template",
+	ogDescription:
+		"Customize your Robust Nuxt Template experience. Configure theme, color scheme, language preferences, and application settings for optimal development workflow.",
+	ogType: "website",
+	ogUrl: "https://your-domain.com" + route.path,
+	twitterCard: "summary",
+	twitterTitle: "Settings - Robust Nuxt Template",
+	twitterDescription:
+		"Customize theme, language, and application settings for your development workflow",
+});
+
 definePageMeta({
 	middleware: ["auth"],
 });

@@ -1,5 +1,23 @@
 <script setup lang="ts">
 const recommendationsStore = useRecommendationsStore();
+const route = useRoute();
+
+useSeoMeta({
+	title: "Anime Recommendations - Robust Nuxt Template",
+	description:
+		"Discover personalized anime recommendations using the Jikan API. Browse anime series and find your next favorite show with our powerful recommendation engine.",
+	keywords:
+		"anime recommendations, Jikan API, anime discovery, anime series, watch anime, anime database, anime search",
+	ogTitle: "Anime Recommendations - Robust Nuxt Template",
+	ogDescription:
+		"Discover personalized anime recommendations using the Jikan API. Browse anime series and find your next favorite show with our powerful recommendation engine.",
+	ogType: "website",
+	ogUrl: "https://your-domain.com" + route.path,
+	twitterCard: "summary",
+	twitterTitle: "Anime Recommendations - Robust Nuxt Template",
+	twitterDescription:
+		"Personalized anime recommendations powered by Jikan API for discovering your next favorite series",
+});
 
 const { pending } = await useAsyncData("recommendations", async () => {
 	recommendationsStore.fetchRecommendations("anime");
