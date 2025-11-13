@@ -23,6 +23,23 @@ watch(locale, async (newLocale) => {
 	// Navigate to new localized URL
 	await navigateTo(`/guides/${slug}.${newLocale}`);
 });
+
+// Set SEO meta for individual guide pages
+if (post?.value) {
+	useSeoMeta({
+		title: `${post.value.title} - Documentation - Robust Nuxt Template`,
+		description: `${post.value.description || "Learn about " + post.value.title} - Part of the comprehensive Robust Nuxt Template documentation`,
+		keywords:
+			"documentation, guide, tutorial, Nuxt 3, Vue.js, TypeScript, Supabase, Capacitor",
+		ogTitle: `${post.value.title} - Documentation - Robust Nuxt Template`,
+		ogDescription: `${post.value.description || "Learn about " + post.value.title} - Part of the comprehensive Robust Nuxt Template documentation`,
+		ogType: "article",
+		ogUrl: "https://your-domain.com" + route.path,
+		twitterCard: "summary",
+		twitterTitle: `${post.value.title} - Documentation - Robust Nuxt Template`,
+		twitterDescription: `${post.value.description || "Learn about " + post.value.title}`,
+	});
+}
 </script>
 
 <template>

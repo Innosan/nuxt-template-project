@@ -1,14 +1,27 @@
 <script setup lang="ts">
+const { locale } = useI18n();
+const route = useRoute();
+
 definePageMeta({
 	middleware: ["auth"],
 });
 
 useSeoMeta({
-	title: "Guides",
-	description: "A list of guides",
+	title: "Documentation Guides - Robust Nuxt Template",
+	description:
+		"Comprehensive documentation and guides for Robust Nuxt Template. Learn how to use Nuxt 3, TypeScript, Supabase authentication, Capacitor mobile development, and more.",
+	keywords:
+		"documentation, guides, tutorials, Nuxt 3, Vue.js, TypeScript, Supabase, Capacitor, mobile development, web development",
+	ogTitle: "Documentation Guides - Robust Nuxt Template",
+	ogDescription:
+		"Comprehensive documentation and guides for Robust Nuxt Template. Learn how to use Nuxt 3, TypeScript, Supabase authentication, Capacitor mobile development, and more.",
+	ogType: "website",
+	ogUrl: "https://your-domain.com" + route.path,
+	twitterCard: "summary",
+	twitterTitle: "Documentation Guides - Robust Nuxt Template",
+	twitterDescription:
+		"Learn Nuxt 3, TypeScript, Supabase, and Capacitor with comprehensive guides and tutorials",
 });
-
-const { locale } = useI18n();
 
 const _guides = await queryCollection("guides")
 	.where("locale", "=", locale.value)
